@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "favourite": false,
+        "title": "Viaggio a Roma",
+        "img": "https://upload.wikimedia.org/wikipedia/en/0/0b/The_Legend_of_Zelda_Breath_of_the_Wild.jpg",
+        "vid": "https://upload.wikimedia.org/wikipedia/en/0/0b/The_Legend_of_Zelda_Breath_of_the_Wild.jpg",
+        "description": "viaggio in gruppo a roma per tre giorni",
+        "weightMB": 14000,
+        "mood": [
+            "happy",
+            "warm"
+        ],
+        "good": "",
+        "bad": "",
+        "sbat": 1,
+        "moneyEffort": 1,
+        "price": 59.99,
+        "tags": [
+            ""
+        ]
+    }
+]
