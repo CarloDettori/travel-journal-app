@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "favourite": false,
+        "tripTitle": "Viaggio in italia",
+        "tripDescription": "viaggio in gruppo a roma per tre giorni",
+        "tripImg": "url",
+        "steps": [
+            {
+                "stepTitle": "tappa a roma",
+                "stepImg": "url",
+                "vid": "url",
+                "stepDescription": "viaggio in gruppo a roma per tre giorni",
+                "mood": [
+                    "happy",
+                    "warm"
+                ],
+                "goodies": "",
+                "badies": "",
+                "sbat": 1,
+                "moneyEffort": 1,
+                "price": 59.99,
+                "tags": [
+                    ""
+                ]
+            }
+        ]
+    }
+]
