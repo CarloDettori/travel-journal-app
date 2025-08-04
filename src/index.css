@@ -1,6 +1,7 @@
 :root {
     --text-dark-color: #ded9d1;
     --text-dark-color: #4b4947;
+    --frame-bg-color: #f7f7f7;
 }
 
 @font-face {
@@ -18,11 +19,12 @@ body {
 
 main {
     background-image: url(/textures/grass.png);
-    height: calc(100vh - 40px)
+    height: calc(100vh - 112px)
 }
 
 header {
-    background-image: url(/textures/sand.png)
+    background-image: url(/textures/sand.png);
+    height: 64px;
 }
 
 #logo {
@@ -32,6 +34,53 @@ header {
 #headerbottom {
     background-image: url(/edges/grass-sand.png);
     height: 8px
+}
+
+.frame-row {
+    display: flex;
+    height: 8px;
+}
+
+.central-row {
+    display: flex;
+    align-items: stretch;
+}
+
+.frame-corner {
+    width: 8px;
+    height: 8px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+.frame-hori {
+    flex-grow: 1;
+    background-repeat: repeat-x;
+    background-size: auto 8px;
+}
+
+
+.frame-vert {
+    width: 8px;
+    background-repeat: repeat-y;
+    background-size: 8px auto;
+}
+
+#center {
+    background: white;
+    flex-grow: 1;
+    min-height: 64px;
+}
+
+#footertop {
+    background-image: url(/edges/grownd-water.png);
+    height: 8px
+}
+
+footer {
+    background-image: url(/textures/water.png);
+    height: 32px
 }
 
 .navlink {
