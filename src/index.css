@@ -1,1 +1,42 @@
+:root {
+    --text-dark-color: #ded9d1;
+    --text-dark-color: #4b4947;
+}
+
+@font-face {
+    font-family: 'pokemon';
+    src: url('fonts/Mojang-Regular.ttf')format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "pokemon";
+    color: var(--text-dark-color)
+}
+
+main {
+    background-image: url(/textures/grass.png);
+    height: calc(100vh - 40px)
+}
+
+header {
+    background-image: url(/textures/sand.png)
+}
+
+#logo {
+    padding-top: 4px
+}
+
+#headerbottom {
+    background-image: url(/edges/grass-sand.png);
+    height: 8px
+}
+
+.navlink {
+    padding-top: 4px
+}
+
+
 @import "tailwindcss";
