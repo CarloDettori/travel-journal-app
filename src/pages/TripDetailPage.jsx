@@ -2,6 +2,8 @@ export default function TripDetailPage() {
 
 
     return (
-        <h1> TRIPDETTAILPAGE </h1 >
+        <section>
+            <h1> TRIPDETTAILPAGE </h1 >
+        </section>
     )
 }

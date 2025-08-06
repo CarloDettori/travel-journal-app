@@ -2,6 +2,9 @@ export default function PhotoPage() {
 
 
     return (
-        <h1> PHOTOPAGE</h1 >
+        <section>
+            <h1> PHOTOPAGE</h1 >
+
+        </section>
     )
 }

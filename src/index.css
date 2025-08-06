@@ -4,6 +4,13 @@
     --frame-bg-color: #f7f7f7;
 }
 
+.img-natural {
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+}
+
 @font-face {
     font-family: 'pokemon';
     src: url('fonts/Mojang-Regular.ttf')format('truetype');
@@ -14,26 +21,12 @@
 
 body {
     font-family: "pokemon";
-    color: var(--text-dark-color)
-}
-
-main {
-    background-image: url(/textures/grass.png);
-    height: calc(100vh - 112px)
+    color: var(--text-dark-color);
+    box-sizing: border-box;
 }
 
 header {
-    background-image: url(/textures/sand.png);
     height: 64px;
-}
-
-#logo {
-    padding-top: 4px
-}
-
-#headerbottom {
-    background-image: url(/edges/grass-sand.png);
-    height: 8px
 }
 
 .frame-row {
@@ -73,19 +66,7 @@ header {
     min-height: 64px;
 }
 
-#footertop {
-    background-image: url(/edges/grownd-water.png);
-    height: 8px
-}
 
-footer {
-    background-image: url(/textures/water.png);
-    height: 32px
-}
-
-.navlink {
-    padding-top: 4px
-}
 
 
 @import "tailwindcss";
