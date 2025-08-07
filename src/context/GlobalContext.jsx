@@ -3,21 +3,24 @@ const GlobalContext = createContext()
 
 const GlobalProvider = ({ children }) => {
 
-    const [theme, setTheme] = useState("land")
+    const [trips, setTrips] = useState([])
 
-    const [posts, setPosts] = useState([])
+    const [theme, setTheme] = useState("land")
+    const [tripTheme, setTripTheme] = useState(theme)
+    const [stepTheme, setStepTheme] = useState(theme)
+
 
     useEffect(() => {
 
         fetch("public/trips.json")
             .then(res => res.json())
-            .then(data => setPosts(data))
-            .catch((err) => console.log(err), setPosts([]))
+            .then(data => setTrips(data))
+            .catch((err) => console.log(err), setTrips([]))
 
     }, [])
 
     return (
-        <GlobalContext.Provider value={{ posts, setPosts, theme, setTheme }}>
+        <GlobalContext.Provider value={{ trips, setTrips, theme, setTheme, tripTheme, setTripTheme, stepTheme, setStepTheme }}>
             {children}
         </GlobalContext.Provider>
     )

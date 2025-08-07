@@ -60,10 +60,16 @@ header {
     background-size: 8px auto;
 }
 
+.tripcard {
+    margin: 16px;
+    width: calc(33vw - 80px);
+}
+
 #center {
     background: white;
     flex-grow: 1;
     min-height: 64px;
+    min-width: 64px;
 }
 
 

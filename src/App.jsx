@@ -1,11 +1,11 @@
 import { GlobalProvider } from "./context/GlobalContext.jsx";
 import DefaultLayout from "../src/layout/DefaultLayout.jsx";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-
+import StepsPage from "./pages/StepsPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import TripsPage from "./pages/TripsPage.jsx";
-import TripDetailPage from "./pages/TripDetailPage.jsx";
 import PhotoPage from "./pages/PhotoPage.jsx";
+
 
 function App() {
 
@@ -16,7 +16,8 @@ function App() {
           <Route element={<DefaultLayout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/trips" element={<TripsPage />} />
-            <Route path="/tripsphotos" element={<PhotoPage />} />
+            <Route path="/trips/:id" element={<StepsPage />} />
+            <Route path="/trips/:id/:id" element={<PhotoPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

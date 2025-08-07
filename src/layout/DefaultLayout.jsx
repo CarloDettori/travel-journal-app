@@ -2,7 +2,6 @@ import { Outlet } from "react-router-dom";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import { useContext } from "react";
-
 import { GlobalContext } from "../context/GlobalContext"
 export default function DefaultLayout() {
     const { posts, setPosts, theme, setTheme } = useContext(GlobalContext)
@@ -47,20 +46,21 @@ export default function DefaultLayout() {
                 height: "16px",
                 backgroundColor: bgcolor,
             }} ></div>
+
             <main className="flex p-10" style={{
                 backgroundImage: url,
-                height: theme === "snow" || theme === "land" ? "calc(100vh - 154px)" : "calc(100vh - 144px)"
+                height: "calc(100vh - 128px)"
             }}>
 
                 <Outlet />
 
             </main >
-            <div className="flex" style={{
+            {/* <div className="flex" style={{
                 backgroundImage: splitter,
                 height: theme === "snow" || theme === "land" ? "32px" : "16px",
                 backgroundColor: bgcolor,
                 backgroundRepeat: "repeat-X"
-            }} ></div>
+            }} ></div> */}
             <Footer />
 
         </>

@@ -1,29 +1,62 @@
 [
     {
         "id": 1,
-        "favourite": false,
-        "tripTitle": "Viaggio in italia",
-        "tripDescription": "viaggio in gruppo a roma per tre giorni",
-        "tripImg": "url",
+        "tripFrame": 1,
+        "tripTheme": "land",
+        "favourites": false,
+        "tripTitle": "Viaggio in Francia",
+        "tripDescription": "Vacanza di gruppo in Francia",
+        "tripImg": "https://placehold.co/600x400",
         "steps": [
             {
-                "stepTitle": "tappa a roma",
-                "stepImg": "url",
-                "vid": "url",
-                "stepDescription": "viaggio in gruppo a roma per tre giorni",
-                "mood": [
-                    "happy",
-                    "warm"
-                ],
-                "goodies": "",
-                "badies": "",
-                "sbat": 1,
-                "moneyEffort": 1,
-                "price": 59.99,
-                "tags": [
+                "goodies": [
+                    "",
                     ""
+                ],
+                "badies": [
+                    "",
+                    ""
+                ],
+                "stepId": 1,
+                "stepFrame": 1,
+                "stepTheme": "land",
+                "stepTitle": "Parigi",
+                "stepDescription": "A Parigi per tre giorni",
+                "stepImg": "https://placehold.co/600x400",
+                "events": [
+                    {
+                        "eventId": 1,
+                        "eventFrame": 1,
+                        "eventTheme": "land",
+                        "eventTitle": "Mon Matre",
+                        "eventDescription": "giretto per i quartieri di Mon Matre",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/69.png",
+                            "/icons/136.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 1,
+                                "momentImg": "https://placehold.co/400x600",
+                                "momentDescription": "mi hanno fatto un ritratto!",
+                                "tags": [
+                                    "#cose",
+                                    "#gente",
+                                    "#posti"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "rilassante",
+                            "accogliente"
+                        ]
+                    }
                 ]
             }
-        ]
+        ],
+        "sbat": 1,
+        "moneyEffort": 1,
+        "price": 4000
     }
 ]
