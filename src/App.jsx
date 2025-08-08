@@ -4,7 +4,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import StepsPage from "./pages/StepsPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import TripsPage from "./pages/TripsPage.jsx";
-import PhotoPage from "./pages/PhotoPage.jsx";
+import EventPage from "./pages/EventPage.jsx";
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/trips" element={<TripsPage />} />
             <Route path="/trips/:id" element={<StepsPage />} />
-            <Route path="/trips/:id/:id" element={<PhotoPage />} />
+            <Route path="/trips/:id/:id" element={<EventPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

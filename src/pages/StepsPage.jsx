@@ -5,17 +5,21 @@ import { GlobalContext } from "../context/GlobalContext"
 
 export default function TripDetailPage() {
     const { id } = useParams()
-
+    console.log(id)
     const { trips, setTrips } = useContext(GlobalContext)
+
+
+    const trip = trips?.find((trip) => trip.id.toString() === id)
+    console.log(trip)
     console.log(trips)
     return (
         <section>
-            <h1> TRIPDETTAILPAGE </h1 >
+            <h1> TAPPE DEL VIAGGIO </h1 >
             <div className="flex">
-                <img src="/sprites/step.png" alt="" />
+                <img className="img-natural my-auto mx-3" src="/sprites/step.png" alt="" />
                 <div>
                     {
-                        trips.find((trip) => trip.id === id).trip.steps.map((step) => {
+                        trip?.steps.map((step) => {
                             return <StepCardComponent key={step.id} step={step} />
                         })
                     }

@@ -3,7 +3,7 @@ export default function PhotoPage() {
 
     return (
         <section>
-            <h1> PHOTOPAGE</h1 >
+            <h1> Eventi a "nome step"</h1 >
 
         </section>
     )
