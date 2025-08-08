@@ -9,6 +9,13 @@
         "tripImg": "https://placehold.co/600x400",
         "steps": [
             {
+                "stepId": 1,
+                "stepFrame": 1,
+                "stepTheme": "land",
+                "place": "",
+                "stepTitle": "Parigi",
+                "stepDescription": "A Parigi per tre giorni",
+                "stepImg": "https://placehold.co/600x400",
                 "goodies": [
                     "",
                     ""
@@ -17,12 +24,6 @@
                     "",
                     ""
                 ],
-                "stepId": 1,
-                "stepFrame": 1,
-                "stepTheme": "land",
-                "stepTitle": "Parigi",
-                "stepDescription": "A Parigi per tre giorni",
-                "stepImg": "https://placehold.co/600x400",
                 "events": [
                     {
                         "eventId": 1,
