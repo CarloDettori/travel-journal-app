@@ -61,7 +61,6 @@ header {
 }
 
 .tripcard {
-    margin: 16px;
     width: calc(33vw - 80px);
 }
 

@@ -9,6 +9,8 @@ export default function TripsPage() {
     return (
         <section className="w-full overflow-y-scroll ">
 
+            <h1 className="text-2xl mb-10 text-center">I TUOI VIAGGI</h1>
+
             <TripfilterComponent trips={trips} />
 
         </section>

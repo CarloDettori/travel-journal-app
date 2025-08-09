@@ -1,15 +1,27 @@
 
 
 import { useState, useMemo, useEffect, useCallback } from "react";
-import TripCardComponent from "./TripCardComponent.jsx";
+import StepCardComponent from "./StepCardComponent.jsx";
+import { useParams } from "react-router-dom";
+import { useContext } from "react";
+import { GlobalContext } from "../../context/GlobalContext.jsx"
 
-export default function TripFilterComponent({ trips }) {
+export default function StepFilterComponent() {
+    const { id } = useParams()
+
+    const { trips, setTrips } = useContext(GlobalContext)
+
+    const steps = trips.find((trip) => trip.id.toString() === id)?.steps;
+
+    console.log(steps)
+
+
     const [searchQuery, setSearchQuery] = useState("");
     const [selectValue, setSelectValue] = useState("");
     const [sortBy, setSortBy] = useState("");
     const [sortOrder, setSortOrder] = useState(1);
     const [tags, setTags] = useState([]);
-    //console.log(trips)
+
     function debounce(callback, delay) {
         let timer;
         return (event) => {
@@ -45,9 +57,9 @@ export default function TripFilterComponent({ trips }) {
     );
 
     useEffect(() => {
-        if (!trips) return;
+        if (!steps) return;
         const uniqueTags = [];
-        trips.forEach((trip) => {
+        steps.forEach((trip) => {
             trip.steps?.forEach((step) => {
                 step.events?.forEach((event) => {
                     event.moments?.forEach((moment) => {
@@ -61,29 +73,28 @@ export default function TripFilterComponent({ trips }) {
             });
         });
         setTags(uniqueTags);
-    }, [trips]);
+    }, [steps]);
 
-    const filteredTrips = useMemo(() => {
-        if (!trips) return [];
+    const filteredSteps = useMemo(() => {
+        if (!steps) return [];
 
 
-        let filtered = [...trips];
+        let filtered = [...steps];
 
         // Filtro per tag
         if (selectValue.trim() !== "" && selectValue.trim() !== "-") {
-            filtered = filtered.filter((trip) =>
-                trip.steps?.some((step) =>
-                    step.events?.some((event) =>
-                        event.moments?.some((moment) =>
-                            moment.tags?.some((tag) =>
-                                tag
-                                    .toLowerCase()
-                                    .includes(selectValue.trim().toLowerCase())
-                            )
+            filtered = filtered.filter((step) =>
+                step.events?.some((event) =>
+                    event.moments?.some((moment) =>
+                        moment.tags?.some((tag) =>
+                            tag
+                                .toLowerCase()
+                                .includes(selectValue.trim().toLowerCase())
                         )
                     )
                 )
-            );
+            )
+
 
         }
 
@@ -94,7 +105,6 @@ export default function TripFilterComponent({ trips }) {
                     ?.toLowerCase()
                     .includes(searchQuery.trim().toLowerCase())
             );
-
         }
 
         // Ordinamento
@@ -126,23 +136,23 @@ export default function TripFilterComponent({ trips }) {
             return result * sortOrder;
         });
 
-
+        ;
 
         return filtered;
-    }, [trips, searchQuery, selectValue, sortBy, sortOrder]);
+    }, [steps, searchQuery, selectValue, sortBy, sortOrder]);
 
-    //console.log(filteredTrips)
+    //console.log(filteredSteps)
 
     return (
-        <section className="w-full">
-            <div className="grid gap-6 mb-1 md:grid-cols-2 ">
+        <>
+            <div className="grid gap-6 mb-1 md:grid-cols-2">
                 {/* Filtro testo */}
                 <div className="pb-3">
                     <label
                         htmlFor="small-input"
-                        className="block mb-2 font-normal arcadefont"
+                        className="block mb-2 font-normal"
                     >
-                        <strong>Cerca un viaggio</strong>
+                        <strong>Cerca una tappa</strong>
                     </label>
                     <input
                         type="text"
@@ -175,7 +185,7 @@ export default function TripFilterComponent({ trips }) {
                     </select>
                 </div>
             </div>
-            {filteredTrips.length !== 0 ? (
+            {filteredSteps.length !== 0 ? (
                 <>
                     <div className="flex flex-col gap-4 flex-wrap">
 
@@ -210,11 +220,11 @@ export default function TripFilterComponent({ trips }) {
                         </div>
 
                         {/* Lista viaggi */}
-                        {filteredTrips.map((trip) => (
-                            <TripCardComponent
-                                key={trip.id}
-                                id={trip.id}
-                                trip={trip}
+                        {filteredSteps.map((step) => (
+                            <StepCardComponent
+                                key={step.stepId}
+                                step={step}
+
                             />
                         ))}
                     </div>
@@ -224,6 +234,6 @@ export default function TripFilterComponent({ trips }) {
                     <strong>nessun viaggio trovato</strong>
                 </p>
             )}
-        </section>
+        </>
     );
 }

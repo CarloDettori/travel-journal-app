@@ -1,9 +1,11 @@
 import { useParams } from "react-router-dom"
-import StepCardComponent from "../components/common/StepCardComponent"
 import { useContext } from "react"
-import { GlobalContext } from "../context/GlobalContext"
+import { GlobalContext } from "../context/GlobalContext.jsx"
+import StepFilterComponent from "../components/common/StepFilterComponent.jsx"
+
 
 export default function TripDetailPage() {
+
     const { id } = useParams()
     console.log(id)
     const { trips, setTrips } = useContext(GlobalContext)
@@ -11,19 +13,17 @@ export default function TripDetailPage() {
 
     const trip = trips?.find((trip) => trip.id.toString() === id)
     console.log(trip)
-    console.log(trips)
     return (
-        <section>
-            <h1> TAPPE DEL VIAGGIO </h1 >
-            <div className="flex">
-                <img className="img-natural my-auto mx-3" src="/sprites/step.png" alt="" />
-                <div>
-                    {
-                        trip?.steps.map((step) => {
-                            return <StepCardComponent key={step.id} step={step} />
-                        })
-                    }
-                </div>
+        <section className="w-full overflow-y-scroll">
+            <h1 className="text-2xl mb-10 text-center"> TAPPE DEL VIAGGIO </h1 >
+
+
+            <div className="">
+                {
+                    trip?.steps.map((step) => {
+                        return <StepFilterComponent key={step.stepId} />
+                    })
+                }
             </div>
         </section>
     )
