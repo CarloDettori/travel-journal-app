@@ -21,6 +21,7 @@
 
 body {
     font-family: "pokemon";
+    word-spacing: 8px;
     color: var(--text-dark-color);
     box-sizing: border-box;
 }

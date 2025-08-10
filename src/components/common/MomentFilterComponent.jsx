@@ -145,7 +145,7 @@ export default function MomentFilterComponent() {
                         {filteredMoments.map((moment) => (
                             <MomentCardComponent
                                 moment={moment}
-
+                                key={moment.momentId}
                             />
                         ))}
                     </div>
