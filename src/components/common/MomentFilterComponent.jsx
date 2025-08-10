@@ -1,26 +1,29 @@
 
 
 import { useState, useMemo, useEffect, useCallback } from "react";
-import StepCardComponent from "./StepCardComponent.jsx";
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
-import { GlobalContext } from "../../context/GlobalContext.jsx"
+import { GlobalContext } from "../../context/GlobalContext.jsx";
+import MomentCardComponent from "./MomentCardComponent.jsx";
 
-export default function StepFilterComponent() {
+
+export default function MomentFilterComponent() {
+
     const { id } = useParams()
 
     const { trips, setTrips } = useContext(GlobalContext)
 
-    const steps = trips.find((trip) => trip.id.toString() === id)?.steps;
-
-    console.log(steps)
-
+    const trip = trips?.find((trip) => trip.id.toString() === id)
+    const step = trip?.steps.find((step) => step.stepId.toString() === id)
+    const event = step?.events.find((event) => event.eventId.toString() === id)
+    const moments = event?.moments || [];
+    //console.log(events)
 
     const [searchQuery, setSearchQuery] = useState("");
     const [selectValue, setSelectValue] = useState("");
     const [sortBy, setSortBy] = useState("");
     const [sortOrder, setSortOrder] = useState(1);
-    const [tags, setTags] = useState([]);
+
 
     function debounce(callback, delay) {
         let timer;
@@ -56,47 +59,14 @@ export default function StepFilterComponent() {
         [sortBy]
     );
 
-    useEffect(() => {
-        if (!steps) return;
-        const uniqueTags = [];
-        steps.forEach((trip) => {
-            trip.steps?.forEach((step) => {
-                step.events?.forEach((event) => {
-                    event.moments?.forEach((moment) => {
-                        moment.tags?.forEach((tag) => {
-                            if (!uniqueTags.includes(tag)) {
-                                uniqueTags.push(tag);
-                            }
-                        });
-                    });
-                });
-            });
-        });
-        setTags(uniqueTags);
-    }, [steps]);
 
-    const filteredSteps = useMemo(() => {
-        if (!steps) return [];
+    const filteredMoments = useMemo(() => {
+        if (!moments) return [];
 
 
-        let filtered = [...steps];
+        let filtered = [...moments];
 
         // Filtro per tag
-        if (selectValue.trim() !== "" && selectValue.trim() !== "-") {
-            filtered = filtered.filter((step) =>
-                step.events?.some((event) =>
-                    event.moments?.some((moment) =>
-                        moment.tags?.some((tag) =>
-                            tag
-                                .toLowerCase()
-                                .includes(selectValue.trim().toLowerCase())
-                        )
-                    )
-                )
-            )
-
-
-        }
 
         // Filtro per titolo
         if (searchQuery.trim() !== "") {
@@ -108,44 +78,18 @@ export default function StepFilterComponent() {
         }
 
         // Ordinamento
-        filtered.sort((a, b) => {
-            let result = 0;
 
-            if (sortBy === "title") {
-                // Ordinamento per titolo
-                result = a.tripTitle.localeCompare(b.tripTitle);
-            } else if (sortBy === "tags") {
-                // Estrae tutti i tag, li unisce in una stringa in minuscolo
-                const tagsA = (a.steps || [])
-                    .flatMap(step => step.events || [])
-                    .flatMap(event => event.moments || [])
-                    .flatMap(moment => moment.tags || [])
-                    .map(tag => tag.toLowerCase())
-                    .join(" ");
-
-                const tagsB = (b.steps || [])
-                    .flatMap(step => step.events || [])
-                    .flatMap(event => event.moments || [])
-                    .flatMap(moment => moment.tags || [])
-                    .map(tag => tag.toLowerCase())
-                    .join(" ");
-
-                result = tagsA.localeCompare(tagsB);
-            }
-
-            return result * sortOrder;
-        });
 
         ;
 
         return filtered;
-    }, [steps, searchQuery, selectValue, sortBy, sortOrder]);
+    }, [moments, searchQuery, selectValue, sortBy, sortOrder]);
 
     //console.log(filteredSteps)
 
     return (
         <>
-            <div className="grid gap-6 mb-1 md:grid-cols-2">
+            <div className="w-full">
                 {/* Filtro testo */}
                 <div className="pb-3">
                     <label
@@ -162,30 +106,8 @@ export default function StepFilterComponent() {
                         onChange={handleFilter}
                     />
                 </div>
-
-                {/* Filtro tag */}
-                <div className="pb-10">
-                    <label
-                        htmlFor="tag-filter"
-                        className="block mb-2 font-normal arcadefont"
-                    >
-                        <strong>Filtro per tag</strong>
-                    </label>
-                    <select
-                        id="tag-filter"
-                        className="w-full bg-[#4a5566] p-2 text-white shadow-md rounded-lg text-xs"
-                        onChange={handleFilter}
-                    >
-                        <option value="">Nessuno</option>
-                        {tags.map((tag) => (
-                            <option key={tag} value={tag}>
-                                {tag}
-                            </option>
-                        ))}
-                    </select>
-                </div>
             </div>
-            {filteredSteps.length !== 0 ? (
+            {filteredMoments.length !== 0 ? (
                 <>
                     <div className="flex flex-col gap-4 flex-wrap">
 
@@ -220,10 +142,9 @@ export default function StepFilterComponent() {
                         </div>
 
                         {/* Lista viaggi */}
-                        {filteredSteps.map((step) => (
-                            <StepCardComponent
-                                key={step.stepId}
-                                step={step}
+                        {filteredMoments.map((moment) => (
+                            <MomentCardComponent
+                                moment={moment}
 
                             />
                         ))}
@@ -231,7 +152,7 @@ export default function StepFilterComponent() {
                 </>
             ) : (
                 <p>
-                    <strong>nessun viaggio trovato</strong>
+                    <strong>nessun momento trovato</strong>
                 </p>
             )}
         </>

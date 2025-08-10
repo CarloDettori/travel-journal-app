@@ -10,13 +10,17 @@ const GlobalProvider = ({ children }) => {
     const [stepTheme, setStepTheme] = useState(theme)
 
 
+    async function fetchData(url) {
+        const response = await fetch(url)
+        const dati = await response.json()
+        return dati
+    }
+
     useEffect(() => {
-
-        fetch("public/trips.json")
-            .then(res => res.json())
-            .then(data => setTrips(data))
-            .catch((err) => console.log(err), setTrips([]))
-
+        fetchData("/trips.json")
+            .then(obj => setTrips(obj))
+            .catch(error => console.error(error))
+            .finally(console.log("fetch end"))
     }, [])
 
     return (

@@ -5,6 +5,7 @@ import StepsPage from "./pages/StepsPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import TripsPage from "./pages/TripsPage.jsx";
 import EventPage from "./pages/EventPage.jsx";
+import MomentPage from "./pages/MomentPage.jsx";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/trips" element={<TripsPage />} />
             <Route path="/trips/:id" element={<StepsPage />} />
             <Route path="/trips/:id/:id" element={<EventPage />} />
+            <Route path="/trips/:id/:id/:id" element={<MomentPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
