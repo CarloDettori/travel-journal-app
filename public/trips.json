@@ -12,17 +12,17 @@
                 "stepId": 1,
                 "stepFrame": 1,
                 "stepTheme": "land",
-                "place": "",
+                "place": "Parigi",
                 "stepTitle": "Parigi",
                 "stepDescription": "A Parigi per tre giorni",
                 "stepImg": "https://placehold.co/600x400",
                 "goodies": [
-                    "",
-                    ""
+                    "croissant freschi",
+                    "musei gratuiti"
                 ],
                 "badies": [
-                    "",
-                    ""
+                    "pioggia improvvisa",
+                    "code lunghe"
                 ],
                 "events": [
                     {
@@ -30,7 +30,7 @@
                         "eventFrame": 1,
                         "eventTheme": "land",
                         "eventTitle": "Mon Matre",
-                        "eventDescription": "giretto per i quartieri di Mon Matre",
+                        "eventDescription": "Giretto per i quartieri di Mon Matre",
                         "eventImg": "https://placehold.co/600x400",
                         "icons": [
                             "/icons/69.png",
@@ -39,18 +39,460 @@
                         "moments": [
                             {
                                 "momentId": 1,
-                                "momentImg": "https://placehold.co/500X400",
-                                "momentDescription": "mi hanno fatto un ritratto!",
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Mi hanno fatto un ritratto!",
                                 "tags": [
                                     "#cose",
                                     "#gente",
                                     "#posti"
+                                ]
+                            },
+                            {
+                                "momentId": 2,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Panorama sulla città",
+                                "tags": [
+                                    "#panorama",
+                                    "#parigi",
+                                    "#arte"
+                                ]
+                            },
+                            {
+                                "momentId": 3,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Caffè in piazza",
+                                "tags": [
+                                    "#cibo",
+                                    "#relax",
+                                    "#gente"
                                 ]
                             }
                         ],
                         "mood": [
                             "rilassante",
                             "accogliente"
+                        ]
+                    },
+                    {
+                        "eventId": 2,
+                        "eventFrame": 2,
+                        "eventTheme": "land",
+                        "eventTitle": "Tour Eiffel",
+                        "eventDescription": "Salita in cima e vista notturna",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/12.png",
+                            "/icons/78.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 4,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Foto dalla cima",
+                                "tags": [
+                                    "#parigi",
+                                    "#vista",
+                                    "#notte"
+                                ]
+                            },
+                            {
+                                "momentId": 5,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Street food sotto la torre",
+                                "tags": [
+                                    "#cibo",
+                                    "#parigi",
+                                    "#francia"
+                                ]
+                            },
+                            {
+                                "momentId": 6,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Spettacolo di luci",
+                                "tags": [
+                                    "#notte",
+                                    "#luci",
+                                    "#wow"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "entusiasmante",
+                            "romantico"
+                        ]
+                    },
+                    {
+                        "eventId": 3,
+                        "eventFrame": 3,
+                        "eventTheme": "land",
+                        "eventTitle": "Louvre",
+                        "eventDescription": "Giornata al museo",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/99.png",
+                            "/icons/136.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 7,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Vista della Gioconda",
+                                "tags": [
+                                    "#arte",
+                                    "#louvre",
+                                    "#parigi"
+                                ]
+                            },
+                            {
+                                "momentId": 8,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Sculture antiche",
+                                "tags": [
+                                    "#arte",
+                                    "#scultura",
+                                    "#museo"
+                                ]
+                            },
+                            {
+                                "momentId": 9,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Cortile interno",
+                                "tags": [
+                                    "#architettura",
+                                    "#francia",
+                                    "#storia"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "culturale",
+                            "ispirante"
+                        ]
+                    }
+                ]
+            },
+            {
+                "stepId": 2,
+                "stepFrame": 2,
+                "stepTheme": "land",
+                "place": "Lione",
+                "stepTitle": "Lione",
+                "stepDescription": "Esplorando la città vecchia",
+                "stepImg": "https://placehold.co/600x400",
+                "goodies": [
+                    "cucina tipica",
+                    "centro storico"
+                ],
+                "badies": [
+                    "strade affollate",
+                    "pochi parcheggi"
+                ],
+                "events": [
+                    {
+                        "eventId": 4,
+                        "eventFrame": 1,
+                        "eventTheme": "land",
+                        "eventTitle": "Mercato di Lione",
+                        "eventDescription": "Assaggio di formaggi e salumi",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/23.png",
+                            "/icons/56.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 10,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Formaggi stagionati",
+                                "tags": [
+                                    "#cibo",
+                                    "#formaggi",
+                                    "#mercato"
+                                ]
+                            },
+                            {
+                                "momentId": 11,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Vini locali",
+                                "tags": [
+                                    "#vino",
+                                    "#degustazione",
+                                    "#francia"
+                                ]
+                            },
+                            {
+                                "momentId": 12,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Spezie colorate",
+                                "tags": [
+                                    "#spezie",
+                                    "#mercato",
+                                    "#profumi"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "gustoso",
+                            "vivace"
+                        ]
+                    },
+                    {
+                        "eventId": 5,
+                        "eventFrame": 2,
+                        "eventTheme": "land",
+                        "eventTitle": "Cattedrale di Lione",
+                        "eventDescription": "Visita alla cattedrale gotica",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/99.png",
+                            "/icons/101.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 13,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Vetrate colorate",
+                                "tags": [
+                                    "#arte",
+                                    "#chiesa",
+                                    "#gotico"
+                                ]
+                            },
+                            {
+                                "momentId": 14,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Organo antico",
+                                "tags": [
+                                    "#musica",
+                                    "#storia",
+                                    "#arte"
+                                ]
+                            },
+                            {
+                                "momentId": 15,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Campanile panoramico",
+                                "tags": [
+                                    "#panorama",
+                                    "#architettura",
+                                    "#lione"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "sereno",
+                            "riflessivo"
+                        ]
+                    },
+                    {
+                        "eventId": 6,
+                        "eventFrame": 3,
+                        "eventTheme": "land",
+                        "eventTitle": "Parco della Tête d'Or",
+                        "eventDescription": "Passeggiata nel parco botanico",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/145.png",
+                            "/icons/78.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 16,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Giardino delle rose",
+                                "tags": [
+                                    "#natura",
+                                    "#fiori",
+                                    "#relax"
+                                ]
+                            },
+                            {
+                                "momentId": 17,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Lago centrale",
+                                "tags": [
+                                    "#lago",
+                                    "#barca",
+                                    "#passeggiata"
+                                ]
+                            },
+                            {
+                                "momentId": 18,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Zoo gratuito",
+                                "tags": [
+                                    "#animali",
+                                    "#famiglia",
+                                    "#natura"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "rilassante",
+                            "familiare"
+                        ]
+                    }
+                ]
+            },
+            {
+                "stepId": 3,
+                "stepFrame": 3,
+                "stepTheme": "land",
+                "place": "Marsiglia",
+                "stepTitle": "Marsiglia",
+                "stepDescription": "Tra porto e calette",
+                "stepImg": "https://placehold.co/600x400",
+                "goodies": [
+                    "mare",
+                    "cucina di pesce"
+                ],
+                "badies": [
+                    "vento forte",
+                    "traffico"
+                ],
+                "events": [
+                    {
+                        "eventId": 7,
+                        "eventFrame": 1,
+                        "eventTheme": "land",
+                        "eventTitle": "Vieux-Port",
+                        "eventDescription": "Passeggiata lungo il porto vecchio",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/12.png",
+                            "/icons/89.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 19,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Pescherecci in arrivo",
+                                "tags": [
+                                    "#mare",
+                                    "#porto",
+                                    "#pesce"
+                                ]
+                            },
+                            {
+                                "momentId": 20,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Mercato del pesce",
+                                "tags": [
+                                    "#pesce",
+                                    "#cibo",
+                                    "#mercato"
+                                ]
+                            },
+                            {
+                                "momentId": 21,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Tramonto sul porto",
+                                "tags": [
+                                    "#tramonto",
+                                    "#mare",
+                                    "#marsiglia"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "vivace",
+                            "marittimo"
+                        ]
+                    },
+                    {
+                        "eventId": 8,
+                        "eventFrame": 2,
+                        "eventTheme": "land",
+                        "eventTitle": "Notre-Dame de la Garde",
+                        "eventDescription": "Vista panoramica sulla città",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/99.png",
+                            "/icons/78.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 22,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Panorama a 360°",
+                                "tags": [
+                                    "#panorama",
+                                    "#marsiglia",
+                                    "#città"
+                                ]
+                            },
+                            {
+                                "momentId": 23,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Interni decorati",
+                                "tags": [
+                                    "#chiesa",
+                                    "#arte",
+                                    "#religione"
+                                ]
+                            },
+                            {
+                                "momentId": 24,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Scalinata monumentale",
+                                "tags": [
+                                    "#architettura",
+                                    "#marsiglia",
+                                    "#storia"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "maestoso",
+                            "ispirante"
+                        ]
+                    },
+                    {
+                        "eventId": 9,
+                        "eventFrame": 3,
+                        "eventTheme": "land",
+                        "eventTitle": "Calanques",
+                        "eventDescription": "Escursione tra le calette",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/145.png",
+                            "/icons/12.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 25,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Acqua cristallina",
+                                "tags": [
+                                    "#mare",
+                                    "#nuoto",
+                                    "#estate"
+                                ]
+                            },
+                            {
+                                "momentId": 26,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Scogliere bianche",
+                                "tags": [
+                                    "#natura",
+                                    "#scogliere",
+                                    "#mare"
+                                ]
+                            },
+                            {
+                                "momentId": 27,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Pic-nic sulla spiaggia",
+                                "tags": [
+                                    "#spiaggia",
+                                    "#relax",
+                                    "#cibo"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "avventuroso",
+                            "rilassante"
                         ]
                     }
                 ]
@@ -59,5 +501,1514 @@
         "sbat": 1,
         "moneyEffort": 1,
         "price": 4000
+    },
+    {
+        "id": 2,
+        "tripFrame": 1,
+        "tripTheme": "land",
+        "favourites": true,
+        "tripTitle": "Tour del Giappone",
+        "tripDescription": "Un viaggio tra tradizione e modernità in Giappone",
+        "tripImg": "https://placehold.co/600x400",
+        "steps": [
+            {
+                "stepId": 4,
+                "stepFrame": 1,
+                "stepTheme": "land",
+                "place": "Tokyo",
+                "stepTitle": "Tokyo",
+                "stepDescription": "La metropoli che non dorme mai",
+                "stepImg": "https://placehold.co/600x400",
+                "goodies": [
+                    "tecnologia avanzata",
+                    "cibo vario"
+                ],
+                "badies": [
+                    "affollamento",
+                    "prezzi alti"
+                ],
+                "events": [
+                    {
+                        "eventId": 10,
+                        "eventFrame": 1,
+                        "eventTheme": "land",
+                        "eventTitle": "Shibuya Crossing",
+                        "eventDescription": "Attraversare l'incrocio più famoso al mondo",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/23.png",
+                            "/icons/78.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 28,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Folla in movimento",
+                                "tags": [
+                                    "#tokyo",
+                                    "#città",
+                                    "#giappone"
+                                ]
+                            },
+                            {
+                                "momentId": 29,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Vista dall'alto",
+                                "tags": [
+                                    "#panorama",
+                                    "#città",
+                                    "#moderno"
+                                ]
+                            },
+                            {
+                                "momentId": 30,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Cartelloni luminosi",
+                                "tags": [
+                                    "#notte",
+                                    "#luci",
+                                    "#tokyo"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "energetico",
+                            "vibrante"
+                        ]
+                    },
+                    {
+                        "eventId": 11,
+                        "eventFrame": 2,
+                        "eventTheme": "land",
+                        "eventTitle": "Tempio Senso-ji",
+                        "eventDescription": "Visita al più antico tempio buddhista di Tokyo",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/99.png",
+                            "/icons/136.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 31,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Ingresso Kaminarimon",
+                                "tags": [
+                                    "#tradizione",
+                                    "#giappone",
+                                    "#tempio"
+                                ]
+                            },
+                            {
+                                "momentId": 32,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Pagoda a cinque piani",
+                                "tags": [
+                                    "#architettura",
+                                    "#storia",
+                                    "#buddhismo"
+                                ]
+                            },
+                            {
+                                "momentId": 33,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Bancarelle di souvenir",
+                                "tags": [
+                                    "#shopping",
+                                    "#tokyo",
+                                    "#mercato"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "spirituale",
+                            "storico"
+                        ]
+                    },
+                    {
+                        "eventId": 12,
+                        "eventFrame": 3,
+                        "eventTheme": "land",
+                        "eventTitle": "Parco Ueno",
+                        "eventDescription": "Passeggiata tra ciliegi in fiore",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/145.png",
+                            "/icons/12.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 34,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Sakura in piena fioritura",
+                                "tags": [
+                                    "#natura",
+                                    "#primavera",
+                                    "#tokyo"
+                                ]
+                            },
+                            {
+                                "momentId": 35,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Picnic sotto i ciliegi",
+                                "tags": [
+                                    "#giappone",
+                                    "#relax",
+                                    "#natura"
+                                ]
+                            },
+                            {
+                                "momentId": 36,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Laghetti e ponti",
+                                "tags": [
+                                    "#paesaggio",
+                                    "#giappone",
+                                    "#parco"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "rilassante",
+                            "romantico"
+                        ]
+                    }
+                ]
+            },
+            {
+                "stepId": 5,
+                "stepFrame": 2,
+                "stepTheme": "land",
+                "place": "Kyoto",
+                "stepTitle": "Kyoto",
+                "stepDescription": "Antica capitale del Giappone",
+                "stepImg": "https://placehold.co/600x400",
+                "goodies": [
+                    "templi storici",
+                    "giardini zen"
+                ],
+                "badies": [
+                    "caldo estivo",
+                    "turisti ovunque"
+                ],
+                "events": [
+                    {
+                        "eventId": 13,
+                        "eventFrame": 1,
+                        "eventTheme": "land",
+                        "eventTitle": "Fushimi Inari",
+                        "eventDescription": "Camminata tra i 10.000 torii",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/99.png",
+                            "/icons/78.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 37,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Corridoio rosso infinito",
+                                "tags": [
+                                    "#kyoto",
+                                    "#giappone",
+                                    "#torii"
+                                ]
+                            },
+                            {
+                                "momentId": 38,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Panorama dalla collina",
+                                "tags": [
+                                    "#vista",
+                                    "#natura",
+                                    "#kyoto"
+                                ]
+                            },
+                            {
+                                "momentId": 39,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Tempio principale",
+                                "tags": [
+                                    "#religione",
+                                    "#shintoismo",
+                                    "#giappone"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "mistico",
+                            "affascinante"
+                        ]
+                    },
+                    {
+                        "eventId": 14,
+                        "eventFrame": 2,
+                        "eventTheme": "land",
+                        "eventTitle": "Kinkaku-ji",
+                        "eventDescription": "Il padiglione d'oro",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/136.png",
+                            "/icons/145.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 40,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Riflesso sul lago",
+                                "tags": [
+                                    "#kyoto",
+                                    "#giappone",
+                                    "#tempio"
+                                ]
+                            },
+                            {
+                                "momentId": 41,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Giardini curati",
+                                "tags": [
+                                    "#giappone",
+                                    "#natura",
+                                    "#zen"
+                                ]
+                            },
+                            {
+                                "momentId": 42,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Dettagli architettonici dorati",
+                                "tags": [
+                                    "#arte",
+                                    "#architettura",
+                                    "#giappone"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "sereno",
+                            "raffinato"
+                        ]
+                    },
+                    {
+                        "eventId": 15,
+                        "eventFrame": 3,
+                        "eventTheme": "land",
+                        "eventTitle": "Gion",
+                        "eventDescription": "Quartiere delle geishe",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/23.png",
+                            "/icons/12.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 43,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Stradine illuminate",
+                                "tags": [
+                                    "#kyoto",
+                                    "#giappone",
+                                    "#notte"
+                                ]
+                            },
+                            {
+                                "momentId": 44,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Incontro con una geisha",
+                                "tags": [
+                                    "#giappone",
+                                    "#cultura",
+                                    "#tradizione"
+                                ]
+                            },
+                            {
+                                "momentId": 45,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Case in legno antico",
+                                "tags": [
+                                    "#architettura",
+                                    "#giappone",
+                                    "#storico"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "culturale",
+                            "suggestivo"
+                        ]
+                    }
+                ]
+            },
+            {
+                "stepId": 6,
+                "stepFrame": 3,
+                "stepTheme": "land",
+                "place": "Osaka",
+                "stepTitle": "Osaka",
+                "stepDescription": "La capitale del cibo di strada",
+                "stepImg": "https://placehold.co/600x400",
+                "goodies": [
+                    "cibo economico",
+                    "vita notturna"
+                ],
+                "badies": [
+                    "umidità",
+                    "traffico"
+                ],
+                "events": [
+                    {
+                        "eventId": 16,
+                        "eventFrame": 1,
+                        "eventTheme": "land",
+                        "eventTitle": "Dotonbori",
+                        "eventDescription": "La via dei neon e del cibo",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/78.png",
+                            "/icons/145.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 46,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Insegna del granchio gigante",
+                                "tags": [
+                                    "#osaka",
+                                    "#giappone",
+                                    "#notte"
+                                ]
+                            },
+                            {
+                                "momentId": 47,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Okonomiyaki fumante",
+                                "tags": [
+                                    "#cibo",
+                                    "#osaka",
+                                    "#streetfood"
+                                ]
+                            },
+                            {
+                                "momentId": 48,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Canale illuminato",
+                                "tags": [
+                                    "#notte",
+                                    "#osaka",
+                                    "#luci"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "vivace",
+                            "goloso"
+                        ]
+                    },
+                    {
+                        "eventId": 17,
+                        "eventFrame": 2,
+                        "eventTheme": "land",
+                        "eventTitle": "Castello di Osaka",
+                        "eventDescription": "Simbolo della città",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/99.png",
+                            "/icons/78.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 49,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Vista dalla torre",
+                                "tags": [
+                                    "#osaka",
+                                    "#giappone",
+                                    "#castello"
+                                ]
+                            },
+                            {
+                                "momentId": 50,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Giardini esterni",
+                                "tags": [
+                                    "#giappone",
+                                    "#natura",
+                                    "#parco"
+                                ]
+                            },
+                            {
+                                "momentId": 51,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Museo interno",
+                                "tags": [
+                                    "#storia",
+                                    "#giappone",
+                                    "#cultura"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "storico",
+                            "maestoso"
+                        ]
+                    },
+                    {
+                        "eventId": 18,
+                        "eventFrame": 3,
+                        "eventTheme": "land",
+                        "eventTitle": "Kuromon Ichiba",
+                        "eventDescription": "Mercato alimentare coperto",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/23.png",
+                            "/icons/12.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 52,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Sushi fresco",
+                                "tags": [
+                                    "#cibo",
+                                    "#giappone",
+                                    "#mercato"
+                                ]
+                            },
+                            {
+                                "momentId": 53,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Frutti di mare esposti",
+                                "tags": [
+                                    "#mare",
+                                    "#giappone",
+                                    "#cibo"
+                                ]
+                            },
+                            {
+                                "momentId": 54,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Dolci tipici giapponesi",
+                                "tags": [
+                                    "#dessert",
+                                    "#giappone",
+                                    "#cibo"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "goloso",
+                            "vivace"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "sbat": 2,
+        "moneyEffort": 2,
+        "price": 6500
+    },
+    {
+        "id": 3,
+        "tripFrame": 2,
+        "tripTheme": "land",
+        "favourites": false,
+        "tripTitle": "On the Road negli USA",
+        "tripDescription": "Un'avventura coast-to-coast tra città e natura",
+        "tripImg": "https://placehold.co/600x400",
+        "steps": [
+            {
+                "stepId": 7,
+                "stepFrame": 1,
+                "stepTheme": "land",
+                "place": "New York",
+                "stepTitle": "New York",
+                "stepDescription": "La città che non dorme mai",
+                "stepImg": "https://placehold.co/600x400",
+                "goodies": [
+                    "grattacieli",
+                    "cibo internazionale"
+                ],
+                "badies": [
+                    "traffico",
+                    "costi alti"
+                ],
+                "events": [
+                    {
+                        "eventId": 19,
+                        "eventFrame": 1,
+                        "eventTheme": "land",
+                        "eventTitle": "Times Square",
+                        "eventDescription": "Cuore pulsante della città",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/78.png",
+                            "/icons/145.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 55,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Cartelloni luminosi",
+                                "tags": [
+                                    "#nyc",
+                                    "#usa",
+                                    "#notte"
+                                ]
+                            },
+                            {
+                                "momentId": 56,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Folla di turisti",
+                                "tags": [
+                                    "#città",
+                                    "#turismo",
+                                    "#newyork"
+                                ]
+                            },
+                            {
+                                "momentId": 57,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Street performer",
+                                "tags": [
+                                    "#arte",
+                                    "#strada",
+                                    "#musica"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "vivace",
+                            "energetico"
+                        ]
+                    },
+                    {
+                        "eventId": 20,
+                        "eventFrame": 2,
+                        "eventTheme": "land",
+                        "eventTitle": "Central Park",
+                        "eventDescription": "Oasi verde nel cuore della città",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/145.png",
+                            "/icons/23.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 58,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Picnic al sole",
+                                "tags": [
+                                    "#parco",
+                                    "#nyc",
+                                    "#relax"
+                                ]
+                            },
+                            {
+                                "momentId": 59,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Laghetti con barche",
+                                "tags": [
+                                    "#natura",
+                                    "#nyc",
+                                    "#parco"
+                                ]
+                            },
+                            {
+                                "momentId": 60,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Concerti all'aperto",
+                                "tags": [
+                                    "#musica",
+                                    "#nyc",
+                                    "#eventi"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "rilassante",
+                            "culturale"
+                        ]
+                    },
+                    {
+                        "eventId": 21,
+                        "eventFrame": 3,
+                        "eventTheme": "land",
+                        "eventTitle": "Statua della Libertà",
+                        "eventDescription": "Simbolo degli Stati Uniti",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/99.png",
+                            "/icons/78.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 61,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Vista dal traghetto",
+                                "tags": [
+                                    "#liberty",
+                                    "#nyc",
+                                    "#mare"
+                                ]
+                            },
+                            {
+                                "momentId": 62,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Base della statua",
+                                "tags": [
+                                    "#storia",
+                                    "#nyc",
+                                    "#usa"
+                                ]
+                            },
+                            {
+                                "momentId": 63,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Panorama skyline",
+                                "tags": [
+                                    "#nyc",
+                                    "#panorama",
+                                    "#usa"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "patriottico",
+                            "storico"
+                        ]
+                    }
+                ]
+            },
+            {
+                "stepId": 8,
+                "stepFrame": 2,
+                "stepTheme": "land",
+                "place": "Las Vegas",
+                "stepTitle": "Las Vegas",
+                "stepDescription": "Capitale mondiale del divertimento",
+                "stepImg": "https://placehold.co/600x400",
+                "goodies": [
+                    "casino",
+                    "spettacoli"
+                ],
+                "badies": [
+                    "caldo estremo",
+                    "spese folli"
+                ],
+                "events": [
+                    {
+                        "eventId": 22,
+                        "eventFrame": 1,
+                        "eventTheme": "land",
+                        "eventTitle": "The Strip",
+                        "eventDescription": "Viale principale pieno di luci",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/78.png",
+                            "/icons/136.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 64,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Hotel iconici",
+                                "tags": [
+                                    "#vegas",
+                                    "#usa",
+                                    "#notte"
+                                ]
+                            },
+                            {
+                                "momentId": 65,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Fontane danzanti",
+                                "tags": [
+                                    "#spettacolo",
+                                    "#vegas",
+                                    "#acqua"
+                                ]
+                            },
+                            {
+                                "momentId": 66,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Show dal vivo",
+                                "tags": [
+                                    "#musica",
+                                    "#vegas",
+                                    "#show"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "eccitante",
+                            "colorato"
+                        ]
+                    },
+                    {
+                        "eventId": 23,
+                        "eventFrame": 2,
+                        "eventTheme": "land",
+                        "eventTitle": "Casino Night",
+                        "eventDescription": "Giocare fino all'alba",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/12.png",
+                            "/icons/23.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 67,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Slot machine luminose",
+                                "tags": [
+                                    "#gioco",
+                                    "#vegas",
+                                    "#casino"
+                                ]
+                            },
+                            {
+                                "momentId": 68,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Roulette in azione",
+                                "tags": [
+                                    "#casino",
+                                    "#vegas",
+                                    "#gioco"
+                                ]
+                            },
+                            {
+                                "momentId": 69,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Tavolo da poker",
+                                "tags": [
+                                    "#poker",
+                                    "#vegas",
+                                    "#gioco"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "adrenalinico",
+                            "sfidante"
+                        ]
+                    },
+                    {
+                        "eventId": 24,
+                        "eventFrame": 3,
+                        "eventTheme": "land",
+                        "eventTitle": "Grand Canyon Tour",
+                        "eventDescription": "Escursione in elicottero",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/145.png",
+                            "/icons/78.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 70,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Vista aerea",
+                                "tags": [
+                                    "#natura",
+                                    "#canyon",
+                                    "#usa"
+                                ]
+                            },
+                            {
+                                "momentId": 71,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Scorci rocciosi",
+                                "tags": [
+                                    "#paesaggio",
+                                    "#usa",
+                                    "#grandcanyon"
+                                ]
+                            },
+                            {
+                                "momentId": 72,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Fiume Colorado",
+                                "tags": [
+                                    "#natura",
+                                    "#fiume",
+                                    "#canyon"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "mozzafiato",
+                            "avventuroso"
+                        ]
+                    }
+                ]
+            },
+            {
+                "stepId": 9,
+                "stepFrame": 3,
+                "stepTheme": "land",
+                "place": "San Francisco",
+                "stepTitle": "San Francisco",
+                "stepDescription": "Città delle colline e dei tram",
+                "stepImg": "https://placehold.co/600x400",
+                "goodies": [
+                    "clima mite",
+                    "panorami"
+                ],
+                "badies": [
+                    "costo vita alto",
+                    "nebbia frequente"
+                ],
+                "events": [
+                    {
+                        "eventId": 25,
+                        "eventFrame": 1,
+                        "eventTheme": "land",
+                        "eventTitle": "Golden Gate Bridge",
+                        "eventDescription": "Attraversare il ponte iconico",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/99.png",
+                            "/icons/78.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 73,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Vista dalla baia",
+                                "tags": [
+                                    "#ponte",
+                                    "#usa",
+                                    "#sanfrancisco"
+                                ]
+                            },
+                            {
+                                "momentId": 74,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Passeggiata sul ponte",
+                                "tags": [
+                                    "#ponte",
+                                    "#vista",
+                                    "#sf"
+                                ]
+                            },
+                            {
+                                "momentId": 75,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Tramonto dietro le torri",
+                                "tags": [
+                                    "#tramonto",
+                                    "#ponte",
+                                    "#usa"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "iconico",
+                            "fotogenico"
+                        ]
+                    },
+                    {
+                        "eventId": 26,
+                        "eventFrame": 2,
+                        "eventTheme": "land",
+                        "eventTitle": "Alcatraz",
+                        "eventDescription": "Visita alla storica prigione",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/12.png",
+                            "/icons/136.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 76,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Celle storiche",
+                                "tags": [
+                                    "#storia",
+                                    "#carcere",
+                                    "#usa"
+                                ]
+                            },
+                            {
+                                "momentId": 77,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Vista sulla baia",
+                                "tags": [
+                                    "#panorama",
+                                    "#sf",
+                                    "#usa"
+                                ]
+                            },
+                            {
+                                "momentId": 78,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Leggende di fuga",
+                                "tags": [
+                                    "#mistero",
+                                    "#usa",
+                                    "#carcere"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "intrigante",
+                            "storico"
+                        ]
+                    },
+                    {
+                        "eventId": 27,
+                        "eventFrame": 3,
+                        "eventTheme": "land",
+                        "eventTitle": "Cable Car Ride",
+                        "eventDescription": "Salire sui tram storici",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/145.png",
+                            "/icons/23.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 79,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Vista sulle colline",
+                                "tags": [
+                                    "#sf",
+                                    "#usa",
+                                    "#tram"
+                                ]
+                            },
+                            {
+                                "momentId": 80,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Tram in corsa",
+                                "tags": [
+                                    "#trasporto",
+                                    "#sf",
+                                    "#storico"
+                                ]
+                            },
+                            {
+                                "momentId": 81,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Centro città",
+                                "tags": [
+                                    "#città",
+                                    "#sf",
+                                    "#tram"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "nostalgico",
+                            "piacevole"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "sbat": 3,
+        "moneyEffort": 3,
+        "price": 8500
+    },
+    {
+        "id": 4,
+        "tripFrame": 3,
+        "tripTheme": "land",
+        "favourites": true,
+        "tripTitle": "Meraviglie d’Italia",
+        "tripDescription": "Un viaggio tra arte, storia e natura in Italia",
+        "tripImg": "https://placehold.co/600x400",
+        "steps": [
+            {
+                "stepId": 10,
+                "stepFrame": 1,
+                "stepTheme": "land",
+                "place": "Roma",
+                "stepTitle": "Roma",
+                "stepDescription": "La città eterna",
+                "stepImg": "https://placehold.co/600x400",
+                "goodies": [
+                    "monumenti storici",
+                    "cucina tipica"
+                ],
+                "badies": [
+                    "traffico",
+                    "code turistiche"
+                ],
+                "events": [
+                    {
+                        "eventId": 28,
+                        "eventFrame": 1,
+                        "eventTheme": "land",
+                        "eventTitle": "Colosseo",
+                        "eventDescription": "Visita all'anfiteatro più famoso al mondo",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/99.png",
+                            "/icons/78.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 82,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Arena interna",
+                                "tags": [
+                                    "#roma",
+                                    "#colosseo",
+                                    "#storia"
+                                ]
+                            },
+                            {
+                                "momentId": 83,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Facciata esterna",
+                                "tags": [
+                                    "#roma",
+                                    "#italia",
+                                    "#monumento"
+                                ]
+                            },
+                            {
+                                "momentId": 84,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Vista panoramica",
+                                "tags": [
+                                    "#roma",
+                                    "#storia",
+                                    "#vista"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "storico",
+                            "imponente"
+                        ]
+                    },
+                    {
+                        "eventId": 29,
+                        "eventFrame": 2,
+                        "eventTheme": "land",
+                        "eventTitle": "Fontana di Trevi",
+                        "eventDescription": "Lancia una moneta ed esprimi un desiderio",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/145.png",
+                            "/icons/12.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 85,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Scultura centrale",
+                                "tags": [
+                                    "#roma",
+                                    "#fontana",
+                                    "#arte"
+                                ]
+                            },
+                            {
+                                "momentId": 86,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Turisti in fila",
+                                "tags": [
+                                    "#roma",
+                                    "#turismo",
+                                    "#fontana"
+                                ]
+                            },
+                            {
+                                "momentId": 87,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Getto della moneta",
+                                "tags": [
+                                    "#roma",
+                                    "#desiderio",
+                                    "#tradizione"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "romantico",
+                            "vivace"
+                        ]
+                    },
+                    {
+                        "eventId": 30,
+                        "eventFrame": 3,
+                        "eventTheme": "land",
+                        "eventTitle": "Musei Vaticani",
+                        "eventDescription": "Un tuffo nell'arte mondiale",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/136.png",
+                            "/icons/78.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 88,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Cappella Sistina",
+                                "tags": [
+                                    "#arte",
+                                    "#vaticano",
+                                    "#roma"
+                                ]
+                            },
+                            {
+                                "momentId": 89,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Galleria delle mappe",
+                                "tags": [
+                                    "#arte",
+                                    "#museo",
+                                    "#roma"
+                                ]
+                            },
+                            {
+                                "momentId": 90,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Cortile interno",
+                                "tags": [
+                                    "#architettura",
+                                    "#roma",
+                                    "#arte"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "culturale",
+                            "ispirante"
+                        ]
+                    }
+                ]
+            },
+            {
+                "stepId": 11,
+                "stepFrame": 2,
+                "stepTheme": "land",
+                "place": "Firenze",
+                "stepTitle": "Firenze",
+                "stepDescription": "Culla del Rinascimento",
+                "stepImg": "https://placehold.co/600x400",
+                "goodies": [
+                    "arte rinascimentale",
+                    "cibo toscano"
+                ],
+                "badies": [
+                    "affollamento",
+                    "prezzi alti"
+                ],
+                "events": [
+                    {
+                        "eventId": 31,
+                        "eventFrame": 1,
+                        "eventTheme": "land",
+                        "eventTitle": "Duomo di Firenze",
+                        "eventDescription": "Salita sulla cupola del Brunelleschi",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/99.png",
+                            "/icons/145.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 91,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Vista dalla cupola",
+                                "tags": [
+                                    "#firenze",
+                                    "#duomo",
+                                    "#vista"
+                                ]
+                            },
+                            {
+                                "momentId": 92,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Facciata gotica",
+                                "tags": [
+                                    "#firenze",
+                                    "#duomo",
+                                    "#architettura"
+                                ]
+                            },
+                            {
+                                "momentId": 93,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Interni affrescati",
+                                "tags": [
+                                    "#firenze",
+                                    "#arte",
+                                    "#duomo"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "artistico",
+                            "storico"
+                        ]
+                    },
+                    {
+                        "eventId": 32,
+                        "eventFrame": 2,
+                        "eventTheme": "land",
+                        "eventTitle": "Galleria degli Uffizi",
+                        "eventDescription": "Capolavori dell'arte italiana",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/136.png",
+                            "/icons/23.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 94,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Nascita di Venere",
+                                "tags": [
+                                    "#arte",
+                                    "#uffizi",
+                                    "#firenze"
+                                ]
+                            },
+                            {
+                                "momentId": 95,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Primavera di Botticelli",
+                                "tags": [
+                                    "#arte",
+                                    "#uffizi",
+                                    "#rinascimento"
+                                ]
+                            },
+                            {
+                                "momentId": 96,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Veduta sul fiume Arno",
+                                "tags": [
+                                    "#firenze",
+                                    "#uffizi",
+                                    "#panorama"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "culturale",
+                            "ispirante"
+                        ]
+                    },
+                    {
+                        "eventId": 33,
+                        "eventFrame": 3,
+                        "eventTheme": "land",
+                        "eventTitle": "Ponte Vecchio",
+                        "eventDescription": "Il ponte più famoso di Firenze",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/145.png",
+                            "/icons/78.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 97,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Vista dal lungarno",
+                                "tags": [
+                                    "#firenze",
+                                    "#ponte",
+                                    "#arno"
+                                ]
+                            },
+                            {
+                                "momentId": 98,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Botteghe storiche",
+                                "tags": [
+                                    "#firenze",
+                                    "#pontevecchio",
+                                    "#artigianato"
+                                ]
+                            },
+                            {
+                                "momentId": 99,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Tramonto sul ponte",
+                                "tags": [
+                                    "#firenze",
+                                    "#tramonto",
+                                    "#ponte"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "romantico",
+                            "storico"
+                        ]
+                    }
+                ]
+            },
+            {
+                "stepId": 12,
+                "stepFrame": 3,
+                "stepTheme": "land",
+                "place": "Venezia",
+                "stepTitle": "Venezia",
+                "stepDescription": "La città sull'acqua",
+                "stepImg": "https://placehold.co/600x400",
+                "goodies": [
+                    "canali unici",
+                    "architettura storica"
+                ],
+                "badies": [
+                    "acqua alta",
+                    "affollamento"
+                ],
+                "events": [
+                    {
+                        "eventId": 34,
+                        "eventFrame": 1,
+                        "eventTheme": "land",
+                        "eventTitle": "Piazza San Marco",
+                        "eventDescription": "Il cuore di Venezia",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/99.png",
+                            "/icons/23.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 100,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Basilica di San Marco",
+                                "tags": [
+                                    "#venezia",
+                                    "#piazza",
+                                    "#basilica"
+                                ]
+                            },
+                            {
+                                "momentId": 101,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Campanile di San Marco",
+                                "tags": [
+                                    "#venezia",
+                                    "#campanile",
+                                    "#vista"
+                                ]
+                            },
+                            {
+                                "momentId": 102,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Piccioni in piazza",
+                                "tags": [
+                                    "#venezia",
+                                    "#piazza",
+                                    "#turismo"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "storico",
+                            "vivace"
+                        ]
+                    },
+                    {
+                        "eventId": 35,
+                        "eventFrame": 2,
+                        "eventTheme": "land",
+                        "eventTitle": "Giro in gondola",
+                        "eventDescription": "Navigando tra i canali",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/145.png",
+                            "/icons/78.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 103,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Ponti romantici",
+                                "tags": [
+                                    "#venezia",
+                                    "#gondola",
+                                    "#ponte"
+                                ]
+                            },
+                            {
+                                "momentId": 104,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Canali silenziosi",
+                                "tags": [
+                                    "#venezia",
+                                    "#canale",
+                                    "#acqua"
+                                ]
+                            },
+                            {
+                                "momentId": 105,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Scorci pittoreschi",
+                                "tags": [
+                                    "#venezia",
+                                    "#panorama",
+                                    "#acqua"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "romantico",
+                            "rilassante"
+                        ]
+                    },
+                    {
+                        "eventId": 36,
+                        "eventFrame": 3,
+                        "eventTheme": "land",
+                        "eventTitle": "Murano e Burano",
+                        "eventDescription": "Isole della laguna veneziana",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/136.png",
+                            "/icons/12.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 106,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Vetri artistici di Murano",
+                                "tags": [
+                                    "#murano",
+                                    "#vetro",
+                                    "#arte"
+                                ]
+                            },
+                            {
+                                "momentId": 107,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Case colorate di Burano",
+                                "tags": [
+                                    "#burano",
+                                    "#colori",
+                                    "#italia"
+                                ]
+                            },
+                            {
+                                "momentId": 108,
+                                "momentImg": "https://placehold.co/500x400",
+                                "momentDescription": "Passeggiata tra i vicoli",
+                                "tags": [
+                                    "#burano",
+                                    "#murano",
+                                    "#laguna"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "artistico",
+                            "pittoresco"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "sbat": 1,
+        "moneyEffort": 2,
+        "price": 5000
     }
 ]

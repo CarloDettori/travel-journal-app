@@ -18,13 +18,9 @@ export default function StepPage() {
             <h1 className="text-2xl mb-10 text-center"> TAPPE DEL VIAGGIO </h1 >
 
 
-            <div className="">
-                {
-                    trip?.steps.map((step) => {
-                        return <StepFilterComponent key={step.stepId} />
-                    })
-                }
-            </div>
+
+            <StepFilterComponent steps={trip.steps} />
+
         </section>
     )
 }

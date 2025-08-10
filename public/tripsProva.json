@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "tripFrame": 1,
+        "tripTheme": "land",
+        "favourites": false,
+        "tripTitle": "Viaggio in Francia",
+        "tripDescription": "Vacanza di gruppo in Francia",
+        "tripImg": "https://placehold.co/600x400",
+        "steps": [
+            {
+                "stepId": 1,
+                "stepFrame": 1,
+                "stepTheme": "land",
+                "place": "",
+                "stepTitle": "Parigi",
+                "stepDescription": "A Parigi per tre giorni",
+                "stepImg": "https://placehold.co/600x400",
+                "goodies": [
+                    "",
+                    ""
+                ],
+                "badies": [
+                    "",
+                    ""
+                ],
+                "events": [
+                    {
+                        "eventId": 1,
+                        "eventFrame": 1,
+                        "eventTheme": "land",
+                        "eventTitle": "Mon Matre",
+                        "eventDescription": "giretto per i quartieri di Mon Matre",
+                        "eventImg": "https://placehold.co/600x400",
+                        "icons": [
+                            "/icons/69.png",
+                            "/icons/136.png"
+                        ],
+                        "moments": [
+                            {
+                                "momentId": 1,
+                                "momentImg": "https://placehold.co/500X400",
+                                "momentDescription": "mi hanno fatto un ritratto!",
+                                "tags": [
+                                    "#cose",
+                                    "#gente",
+                                    "#posti"
+                                ]
+                            }
+                        ],
+                        "mood": [
+                            "rilassante",
+                            "accogliente"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "sbat": 1,
+        "moneyEffort": 1,
+        "price": 4000
+    }
+]

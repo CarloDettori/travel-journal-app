@@ -15,18 +15,18 @@ export default function MomentPage() {
     const step = trip?.steps.find((step) => step.stepId.toString() === id)
     const event = step?.events.find((event) => event.eventId.toString() === id)
 
-    console.log(event)
+
     return (
         <section className="w-full overflow-y-scroll">
             <h1 className="text-2xl mb-10 text-center"> MOMENTI MEMORABILI </h1 >
 
 
             <div className="">
-                {
-                    event?.moments.map((moment) => {
-                        return <MomentFilterComponent key={event.eventId} />
-                    })
-                }
+
+
+                <MomentFilterComponent key={event.eventId} />
+
+
             </div>
         </section>
     )

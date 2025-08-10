@@ -96,7 +96,7 @@ export default function MomentFilterComponent() {
                         htmlFor="small-input"
                         className="block mb-2 font-normal"
                     >
-                        <strong>Cerca una tappa</strong>
+                        <strong>Cerca un momento</strong>
                     </label>
                     <input
                         type="text"

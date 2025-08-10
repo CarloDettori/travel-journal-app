@@ -19,11 +19,11 @@ export default function TripDetailPage() {
 
 
             <div className="">
-                {
-                    step?.events.map((event) => {
-                        return <EventFilterComponent key={event.eventId} />
-                    })
-                }
+
+
+                <EventFilterComponent />
+
+
             </div>
         </section>
     )

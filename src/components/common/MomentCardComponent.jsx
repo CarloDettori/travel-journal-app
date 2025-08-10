@@ -16,7 +16,7 @@ export default function MomentCardComponent({ moment }) {
                     <div className="p-3">
                         <p>{moment.momentDescription}</p>
                         <img className="py-1" src={moment.momentImg} alt="" />
-                        {moment.tags.map((tag) => <p key={tag}>{tag}</p>)}
+                        <p>{moment.tags.map((tag) => tag + " ")}</p>
                     </div>
 
                 </FrameComponent>
