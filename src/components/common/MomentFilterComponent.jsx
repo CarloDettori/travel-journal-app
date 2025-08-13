@@ -1,30 +1,42 @@
-
-
-import { useState, useMemo, useEffect, useCallback } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalContext.jsx";
 import MomentCardComponent from "./MomentCardComponent.jsx";
 
-
 export default function MomentFilterComponent() {
+    const { tripId, stepId, eventId } = useParams();
+    const { trips } = useContext(GlobalContext);
 
-    const { id } = useParams()
+    // Recupera momenti dall'evento
+    const event = trips
+        ?.find((trip) => trip.tripId === Number(tripId))
+        ?.steps.find((step) => step.stepId === Number(stepId))
+        ?.events.find((event) => event.eventId === Number(eventId));
 
-    const { trips, setTrips } = useContext(GlobalContext)
-
-    const trip = trips?.find((trip) => trip.id.toString() === id)
-    const step = trip?.steps.find((step) => step.stepId.toString() === id)
-    const event = step?.events.find((event) => event.eventId.toString() === id)
     const moments = event?.moments || [];
-    //console.log(events)
 
     const [searchQuery, setSearchQuery] = useState("");
     const [selectValue, setSelectValue] = useState("");
     const [sortBy, setSortBy] = useState("");
     const [sortOrder, setSortOrder] = useState(1);
+    const [tags, setTags] = useState([]);
 
+    // Estrai tag disponibili
+    useEffect(() => {
+        if (!moments) return;
+        const uniqueTags = [];
+        moments.forEach((moment) => {
+            moment.tags?.forEach((tag) => {
+                if (!uniqueTags.includes(tag)) {
+                    uniqueTags.push(tag);
+                }
+            });
+        });
+        setTags(uniqueTags);
+    }, [moments]);
 
+    // Debounce
     function debounce(callback, delay) {
         let timer;
         return (event) => {
@@ -59,101 +71,90 @@ export default function MomentFilterComponent() {
         [sortBy]
     );
 
-
+    // Filtraggio e ordinamento
     const filteredMoments = useMemo(() => {
         if (!moments) return [];
-
 
         let filtered = [...moments];
 
         // Filtro per tag
+        if (selectValue.trim() !== "" && selectValue.trim() !== "-") {
+            filtered = filtered.filter((moment) =>
+                moment.tags?.some((tag) =>
+                    tag.toLowerCase().includes(selectValue.trim().toLowerCase())
+                )
+            );
+        }
 
-        // Filtro per titolo
+        // Filtro per descrizione
         if (searchQuery.trim() !== "") {
-            filtered = filtered.filter((trip) =>
-                trip.tripTitle
-                    ?.toLowerCase()
-                    .includes(searchQuery.trim().toLowerCase())
+            filtered = filtered.filter((moment) =>
+                moment.momentDescription?.toLowerCase().includes(searchQuery.trim().toLowerCase())
             );
         }
 
         // Ordinamento
-
-
-        ;
+        filtered.sort((a, b) => {
+            let result = 0;
+            if (sortBy === "description") {
+                result = a.momentDescription.localeCompare(b.momentDescription);
+            } else if (sortBy === "tags") {
+                const tagsA = (a.tags || []).join(" ").toLowerCase();
+                const tagsB = (b.tags || []).join(" ").toLowerCase();
+                result = tagsA.localeCompare(tagsB);
+            }
+            return result * sortOrder;
+        });
 
         return filtered;
     }, [moments, searchQuery, selectValue, sortBy, sortOrder]);
 
-    //console.log(filteredSteps)
-
     return (
         <>
-            <div className="w-full">
-                {/* Filtro testo */}
-                <div className="pb-3">
-                    <label
-                        htmlFor="small-input"
-                        className="block mb-2 font-normal"
-                    >
-                        <strong>Cerca un momento</strong>
-                    </label>
-                    <input
-                        type="text"
-                        id="small-input"
-                        className="bg-[#4a5566] block w-full p-2 text-white shadow-md rounded-lg text-xs"
-                        placeholder="Cerca un viaggio"
-                        onChange={handleFilter}
-                    />
-                </div>
+            {/* Filtro testo */}
+            <div className="pb-3">
+                <label><strong>Cerca un momento</strong></label>
+                <input
+                    type="text"
+                    className="bg-[#4a5566] block w-full p-2 text-white rounded-lg text-xs"
+                    placeholder="Cerca un momento..."
+                    onChange={handleFilter}
+                />
             </div>
-            {filteredMoments.length !== 0 ? (
-                <>
-                    <div className="flex flex-col gap-4 flex-wrap">
 
+            {/* Filtro tag */}
+            <div className="pb-10">
+                <label><strong>Filtro per tag</strong></label>
+                <select
+                    className="w-full bg-[#4a5566] p-2 text-white rounded-lg text-xs"
+                    onChange={handleFilter}
+                >
+                    <option value="">Nessuno</option>
+                    {tags.map((tag) => (
+                        <option key={tag} value={tag}>{tag}</option>
+                    ))}
+                </select>
+            </div>
 
-                        {/* Ordinamento */}
-                        <div className="pt-3 text-end">
-                            <p className="flex justify-between">
-                                <strong
-                                    className="text-start"
-                                    style={{ cursor: "pointer" }}
-                                    onClick={() => handleSort("title")}
-                                >
-                                    TITOLO{" "}
-                                    {sortBy === "title"
-                                        ? sortOrder === 1
-                                            ? "▲"
-                                            : "▼"
-                                        : ""}
-                                </strong>
-                                <strong
-                                    style={{ cursor: "pointer" }}
-                                    onClick={() => handleSort("tags")}
-                                >
-                                    {sortBy === "tags"
-                                        ? sortOrder === 1
-                                            ? "▲"
-                                            : "▼"
-                                        : ""}{" "}
-                                    TAG
-                                </strong>
-                            </p>
-                        </div>
-
-                        {/* Lista viaggi */}
-                        {filteredMoments.map((moment) => (
-                            <MomentCardComponent
-                                moment={moment}
-                                key={moment.momentId}
-                            />
-                        ))}
-                    </div>
-                </>
-            ) : (
-                <p>
-                    <strong>nessun momento trovato</strong>
+            {/* Ordinamento */}
+            <div className="pt-3 text-end">
+                <p className="flex justify-between">
+                    <strong style={{ cursor: "pointer" }} onClick={() => handleSort("description")}>
+                        DESCRIZIONE {sortBy === "description" ? (sortOrder === 1 ? "▲" : "▼") : ""}
+                    </strong>
+                    <strong style={{ cursor: "pointer" }} onClick={() => handleSort("tags")}>
+                        {sortBy === "tags" ? (sortOrder === 1 ? "▲" : "▼") : ""} TAG
+                    </strong>
                 </p>
+            </div>
+
+            {/* Lista momenti */}
+            {filteredMoments.length > 0 ? (
+                filteredMoments.map((moment) => (
+                    <MomentCardComponent key={moment.momentId} moment={moment} />
+                ))
+            ) : (
+                <p><strong>Nessun momento trovato</strong></p>
             )}
         </>
     );

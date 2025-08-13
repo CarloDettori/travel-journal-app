@@ -1,18 +1,14 @@
-import TripfilterComponent from "../components/common/TripFilterComponent.jsx"
 import { useContext } from "react";
-import { GlobalContext } from "../context/GlobalContext.jsx"
+import { GlobalContext } from "../context/GlobalContext.jsx";
+import TripFilterComponent from "../components/common/TripFilterComponent.jsx";
 
-export default function TripsPage() {
-    const { trips, setTrips } = useContext(GlobalContext)
-
+export default function TripPage() {
+    const { trips } = useContext(GlobalContext);
 
     return (
-        <section className="w-full overflow-y-scroll ">
-
-            <h1 className="text-2xl mb-10 text-center">I TUOI VIAGGI</h1>
-
-            <TripfilterComponent trips={trips} />
-
+        <section className="w-full overflow-y-scroll">
+            <h1 className="text-2xl mb-10 text-center">VIAGGI DISPONIBILI</h1>
+            <TripFilterComponent trips={trips} />
         </section>
-    )
+    );
 }

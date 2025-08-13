@@ -51,7 +51,7 @@ export default function StepCardComponent({ step, tripId }) {
                                 )
                             })
                         }
-                        <Link className="ms-auto mt-3 hover:cursor bg-[#4a5566] p-2 text-white rounded-lg text-xs" to={`/trips/${trip.tripId}/${step.stepId}`}>dettagli</Link>
+                        <Link className="ms-auto mt-3 hover:cursor bg-[#4a5566] p-2 text-white rounded-lg text-xs" to={`/trips/${tripId}/${step.stepId}`}>dettagli</Link>
 
                     </div>
 

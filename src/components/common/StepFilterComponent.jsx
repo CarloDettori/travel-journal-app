@@ -1,21 +1,15 @@
-
-
 import { useState, useMemo, useEffect, useCallback } from "react";
-import StepCardComponent from "./StepCardComponent.jsx";
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
-import { GlobalContext } from "../../context/GlobalContext.jsx"
+import { GlobalContext } from "../../context/GlobalContext.jsx";
+import StepCardComponent from "./StepCardComponent.jsx";
 
 export default function StepFilterComponent() {
-    const { tripId } = useParams()
+    const { tripId } = useParams();
+    const { trips } = useContext(GlobalContext);
 
-    const { trips, setTrips } = useContext(GlobalContext)
-
-    const steps = trips.find((trip) => trip.tripId === Number(tripId))?.steps;
-
-    console.log("tripId: ", tripId)
-    console.log("steps: ", steps)
-
+    // Trova il viaggio corrispondente
+    const steps = trips.find((trip) => trip.tripId === Number(tripId))?.steps || [];
 
     const [searchQuery, setSearchQuery] = useState("");
     const [selectValue, setSelectValue] = useState("");
@@ -23,6 +17,25 @@ export default function StepFilterComponent() {
     const [sortOrder, setSortOrder] = useState(1);
     const [tags, setTags] = useState([]);
 
+    // Estrai tutti i tag disponibili
+    useEffect(() => {
+        if (!steps) return;
+        const uniqueTags = [];
+        steps.forEach((step) => {
+            step.events?.forEach((event) => {
+                event.moments?.forEach((moment) => {
+                    moment.tags?.forEach((tag) => {
+                        if (!uniqueTags.includes(tag)) {
+                            uniqueTags.push(tag);
+                        }
+                    });
+                });
+            });
+        });
+        setTags(uniqueTags);
+    }, [steps]);
+
+    // Debounce
     function debounce(callback, delay) {
         let timer;
         return (event) => {
@@ -57,28 +70,9 @@ export default function StepFilterComponent() {
         [sortBy]
     );
 
-    useEffect(() => {
-        if (!steps) return;
-        const uniqueTags = [];
-        steps.forEach((trip) => {
-            trip.steps?.forEach((step) => {
-                step.events?.forEach((event) => {
-                    event.moments?.forEach((moment) => {
-                        moment.tags?.forEach((tag) => {
-                            if (!uniqueTags.includes(tag)) {
-                                uniqueTags.push(tag);
-                            }
-                        });
-                    });
-                });
-            });
-        });
-        setTags(uniqueTags);
-    }, [steps]);
-
+    // Filtraggio e ordinamento
     const filteredSteps = useMemo(() => {
         if (!steps) return [];
-
 
         let filtered = [...steps];
 
@@ -88,153 +82,94 @@ export default function StepFilterComponent() {
                 step.events?.some((event) =>
                     event.moments?.some((moment) =>
                         moment.tags?.some((tag) =>
-                            tag
-                                .toLowerCase()
-                                .includes(selectValue.trim().toLowerCase())
+                            tag.toLowerCase().includes(selectValue.trim().toLowerCase())
                         )
                     )
                 )
-            )
-
-
+            );
         }
 
         // Filtro per titolo
         if (searchQuery.trim() !== "") {
-            filtered = filtered.filter((trip) =>
-                trip.tripTitle
-                    ?.toLowerCase()
-                    .includes(searchQuery.trim().toLowerCase())
+            filtered = filtered.filter((step) =>
+                step.stepTitle?.toLowerCase().includes(searchQuery.trim().toLowerCase())
             );
         }
 
         // Ordinamento
         filtered.sort((a, b) => {
             let result = 0;
-
             if (sortBy === "title") {
-                // Ordinamento per titolo
-                result = a.tripTitle.localeCompare(b.tripTitle);
+                result = a.stepTitle.localeCompare(b.stepTitle);
             } else if (sortBy === "tags") {
-                // Estrae tutti i tag, li unisce in una stringa in minuscolo
-                const tagsA = (a.steps || [])
-                    .flatMap(step => step.events || [])
+                const tagsA = (a.events || [])
                     .flatMap(event => event.moments || [])
                     .flatMap(moment => moment.tags || [])
-                    .map(tag => tag.toLowerCase())
-                    .join(" ");
-
-                const tagsB = (b.steps || [])
-                    .flatMap(step => step.events || [])
+                    .join(" ")
+                    .toLowerCase();
+                const tagsB = (b.events || [])
                     .flatMap(event => event.moments || [])
                     .flatMap(moment => moment.tags || [])
-                    .map(tag => tag.toLowerCase())
-                    .join(" ");
-
+                    .join(" ")
+                    .toLowerCase();
                 result = tagsA.localeCompare(tagsB);
             }
-
             return result * sortOrder;
         });
-
-        ;
 
         return filtered;
     }, [steps, searchQuery, selectValue, sortBy, sortOrder]);
 
-    //console.log(filteredSteps)
-
     return (
         <>
-            <div className="grid gap-6 mb-1 md:grid-cols-2">
-                {/* Filtro testo */}
-                <div className="pb-3">
-                    <label
-                        htmlFor="small-input"
-                        className="block mb-2 font-normal"
-                    >
-                        <strong>Cerca una tappa</strong>
-                    </label>
-                    <input
-                        type="text"
-                        id="small-input"
-                        className="bg-[#4a5566] block w-full p-2 text-white shadow-md rounded-lg text-xs"
-                        placeholder="Cerca un viaggio"
-                        onChange={handleFilter}
-                    />
-                </div>
-
-                {/* Filtro tag */}
-                <div className="pb-10">
-                    <label
-                        htmlFor="tag-filter"
-                        className="block mb-2 font-normal arcadefont"
-                    >
-                        <strong>Filtro per tag</strong>
-                    </label>
-                    <select
-                        id="tag-filter"
-                        className="w-full bg-[#4a5566] p-2 text-white shadow-md rounded-lg text-xs"
-                        onChange={handleFilter}
-                    >
-                        <option value="">Nessuno</option>
-                        {tags.map((tag) => (
-                            <option key={tag} value={tag}>
-                                {tag}
-                            </option>
-                        ))}
-                    </select>
-                </div>
+            {/* Filtro testo */}
+            <div className="pb-3">
+                <label><strong>Cerca una tappa</strong></label>
+                <input
+                    type="text"
+                    className="bg-[#4a5566] block w-full p-2 text-white rounded-lg text-xs"
+                    placeholder="Cerca una tappa..."
+                    onChange={handleFilter}
+                />
             </div>
-            {filteredSteps.length !== 0 ? (
-                <>
-                    <div className="flex flex-col gap-4 flex-wrap">
 
+            {/* Filtro tag */}
+            <div className="pb-10">
+                <label><strong>Filtro per tag</strong></label>
+                <select
+                    className="w-full bg-[#4a5566] p-2 text-white rounded-lg text-xs"
+                    onChange={handleFilter}
+                >
+                    <option value="">Nessuno</option>
+                    {tags.map((tag) => (
+                        <option key={tag} value={tag}>{tag}</option>
+                    ))}
+                </select>
+            </div>
 
-                        {/* Ordinamento */}
-                        <div className="pt-3 text-end">
-                            <p className="flex justify-between">
-                                <strong
-                                    className="text-start"
-                                    style={{ cursor: "pointer" }}
-                                    onClick={() => handleSort("title")}
-                                >
-                                    TITOLO{" "}
-                                    {sortBy === "title"
-                                        ? sortOrder === 1
-                                            ? "▲"
-                                            : "▼"
-                                        : ""}
-                                </strong>
-                                <strong
-                                    style={{ cursor: "pointer" }}
-                                    onClick={() => handleSort("tags")}
-                                >
-                                    {sortBy === "tags"
-                                        ? sortOrder === 1
-                                            ? "▲"
-                                            : "▼"
-                                        : ""}{" "}
-                                    TAG
-                                </strong>
-                            </p>
-                        </div>
-
-                        {/* Lista viaggi */}
-                        {filteredSteps.map((step) => (
-                            <StepCardComponent
-                                key={step.stepId}
-                                step={step}
-                                tripId={trips.tripId}
-
-                            />
-                        ))}
-                    </div>
-                </>
-            ) : (
-                <p>
-                    <strong>nessuna tappa trovata</strong>
+            {/* Ordinamento */}
+            <div className="pt-3 text-end">
+                <p className="flex justify-between">
+                    <strong style={{ cursor: "pointer" }} onClick={() => handleSort("title")}>
+                        TITOLO {sortBy === "title" ? (sortOrder === 1 ? "▲" : "▼") : ""}
+                    </strong>
+                    <strong style={{ cursor: "pointer" }} onClick={() => handleSort("tags")}>
+                        {sortBy === "tags" ? (sortOrder === 1 ? "▲" : "▼") : ""} TAG
+                    </strong>
                 </p>
+            </div>
+
+            {/* Lista tappe */}
+            {filteredSteps.length > 0 ? (
+                filteredSteps.map((step) => (
+                    <StepCardComponent
+                        key={step.stepId}
+                        step={step}
+                        tripId={tripId}
+                    />
+                ))
+            ) : (
+                <p><strong>Nessuna tappa trovata</strong></p>
             )}
         </>
     );

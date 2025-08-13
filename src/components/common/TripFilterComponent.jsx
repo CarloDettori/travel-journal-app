@@ -9,7 +9,28 @@ export default function TripFilterComponent({ trips }) {
     const [sortBy, setSortBy] = useState("");
     const [sortOrder, setSortOrder] = useState(1);
     const [tags, setTags] = useState([]);
-    //console.log(trips)
+
+    // Estrai tutti i tag disponibili dai viaggi
+    useEffect(() => {
+        if (!trips) return;
+        const uniqueTags = [];
+        trips.forEach((trip) => {
+            trip.steps?.forEach((step) => {
+                step.events?.forEach((event) => {
+                    event.moments?.forEach((moment) => {
+                        moment.tags?.forEach((tag) => {
+                            if (!uniqueTags.includes(tag)) {
+                                uniqueTags.push(tag);
+                            }
+                        });
+                    });
+                });
+            });
+        });
+        setTags(uniqueTags);
+    }, [trips]);
+
+    // Debounce input
     function debounce(callback, delay) {
         let timer;
         return (event) => {
@@ -44,28 +65,9 @@ export default function TripFilterComponent({ trips }) {
         [sortBy]
     );
 
-    useEffect(() => {
-        if (!trips) return;
-        const uniqueTags = [];
-        trips.forEach((trip) => {
-            trip.steps?.forEach((step) => {
-                step.events?.forEach((event) => {
-                    event.moments?.forEach((moment) => {
-                        moment.tags?.forEach((tag) => {
-                            if (!uniqueTags.includes(tag)) {
-                                uniqueTags.push(tag);
-                            }
-                        });
-                    });
-                });
-            });
-        });
-        setTags(uniqueTags);
-    }, [trips]);
-
+    // Filtraggio e ordinamento
     const filteredTrips = useMemo(() => {
         if (!trips) return [];
-
 
         let filtered = [...trips];
 
@@ -84,145 +86,87 @@ export default function TripFilterComponent({ trips }) {
                     )
                 )
             );
-
         }
 
         // Filtro per titolo
         if (searchQuery.trim() !== "") {
             filtered = filtered.filter((trip) =>
-                trip.tripTitle
-                    ?.toLowerCase()
-                    .includes(searchQuery.trim().toLowerCase())
+                trip.tripTitle?.toLowerCase().includes(searchQuery.trim().toLowerCase())
             );
-
         }
 
         // Ordinamento
         filtered.sort((a, b) => {
             let result = 0;
-
             if (sortBy === "title") {
-                // Ordinamento per titolo
                 result = a.tripTitle.localeCompare(b.tripTitle);
             } else if (sortBy === "tags") {
-                // Estrae tutti i tag, li unisce in una stringa in minuscolo
                 const tagsA = (a.steps || [])
                     .flatMap(step => step.events || [])
                     .flatMap(event => event.moments || [])
                     .flatMap(moment => moment.tags || [])
-                    .map(tag => tag.toLowerCase())
-                    .join(" ");
-
+                    .join(" ")
+                    .toLowerCase();
                 const tagsB = (b.steps || [])
                     .flatMap(step => step.events || [])
                     .flatMap(event => event.moments || [])
                     .flatMap(moment => moment.tags || [])
-                    .map(tag => tag.toLowerCase())
-                    .join(" ");
-
+                    .join(" ")
+                    .toLowerCase();
                 result = tagsA.localeCompare(tagsB);
             }
-
             return result * sortOrder;
         });
-
-
 
         return filtered;
     }, [trips, searchQuery, selectValue, sortBy, sortOrder]);
 
-    //console.log(filteredTrips)
-
     return (
         <section className="w-full">
-            <div className="grid gap-6 mb-1 md:grid-cols-2 ">
-                {/* Filtro testo */}
-                <div className="pb-3">
-                    <label
-                        htmlFor="small-input"
-                        className="block mb-2 font-normal arcadefont"
-                    >
-                        <strong>Cerca un viaggio</strong>
-                    </label>
-                    <input
-                        type="text"
-                        id="small-input"
-                        className="bg-[#4a5566] block w-full p-2 text-white shadow-md rounded-lg text-xs"
-                        placeholder="Cerca un viaggio..."
-                        onChange={handleFilter}
-                    />
-                </div>
-
-                {/* Filtro tag */}
-                <div className="pb-10">
-                    <label
-                        htmlFor="tag-filter"
-                        className="block mb-2 font-normal arcadefont"
-                    >
-                        <strong>Filtro per tag</strong>
-                    </label>
-                    <select
-                        id="tag-filter"
-                        className="block w-full bg-[#4a5566] p-2 text-white shadow-md rounded-lg text-xs"
-                        onChange={handleFilter}
-                    >
-                        <option value="">Nessuno</option>
-                        {tags.map((tag) => (
-                            <option key={tag} value={tag}>
-                                {tag}
-                            </option>
-                        ))}
-                    </select>
-                </div>
+            {/* Filtro testo */}
+            <div className="pb-3">
+                <label><strong>Cerca un viaggio</strong></label>
+                <input
+                    type="text"
+                    className="bg-[#4a5566] block w-full p-2 text-white rounded-lg text-xs"
+                    placeholder="Cerca un viaggio..."
+                    onChange={handleFilter}
+                />
             </div>
-            {filteredTrips.length !== 0 ? (
-                <>
-                    <div className="flex flex-col gap-4 flex-wrap">
 
+            {/* Filtro tag */}
+            <div className="pb-10">
+                <label><strong>Filtro per tag</strong></label>
+                <select
+                    className="bg-[#4a5566] w-full p-2 text-white rounded-lg text-xs"
+                    onChange={handleFilter}
+                >
+                    <option value="">Nessuno</option>
+                    {tags.map((tag) => (
+                        <option key={tag} value={tag}>{tag}</option>
+                    ))}
+                </select>
+            </div>
 
-                        {/* Ordinamento */}
-                        <div className="pt-3 text-end">
-                            <p className="flex justify-between">
-                                <strong
-                                    className="text-start"
-                                    style={{ cursor: "pointer" }}
-                                    onClick={() => handleSort("title")}
-                                >
-                                    TITOLO{" "}
-                                    {sortBy === "title"
-                                        ? sortOrder === 1
-                                            ? "▲"
-                                            : "▼"
-                                        : ""}
-                                </strong>
-                                <strong
-                                    style={{ cursor: "pointer" }}
-                                    onClick={() => handleSort("tags")}
-                                >
-                                    {sortBy === "tags"
-                                        ? sortOrder === 1
-                                            ? "▲"
-                                            : "▼"
-                                        : ""}{" "}
-                                    TAG
-                                </strong>
-                            </p>
-                        </div>
-
-                        {/* Lista viaggi */}
-                        {filteredTrips.map((trip) => (
-                            <TripCardComponent
-                                key={trip.tripId}
-                                id={trip.tripId}
-                                trip={trip}
-                            />
-                        ))}
-                    </div>
-                </>
-            ) : (
-                <p>
-                    <strong>nessun viaggio trovato</strong>
+            {/* Ordinamento */}
+            <div className="pt-3 text-end">
+                <p className="flex justify-between">
+                    <strong style={{ cursor: "pointer" }} onClick={() => handleSort("title")}>
+                        TITOLO {sortBy === "title" ? (sortOrder === 1 ? "▲" : "▼") : ""}
+                    </strong>
+                    <strong style={{ cursor: "pointer" }} onClick={() => handleSort("tags")}>
+                        {sortBy === "tags" ? (sortOrder === 1 ? "▲" : "▼") : ""} TAG
+                    </strong>
                 </p>
+            </div>
+
+            {/* Lista viaggi */}
+            {filteredTrips.length > 0 ? (
+                filteredTrips.map((trip) => (
+                    <TripCardComponent key={trip.tripId} trip={trip} />
+                ))
+            ) : (
+                <p><strong>Nessun viaggio trovato</strong></p>
             )}
         </section>
     );
