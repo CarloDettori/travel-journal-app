@@ -39,6 +39,7 @@ export default function EventCardComponent({ event, stepId, tripId }) {
 
 
                     <div className="p-3 flex flex-col">
+
                         <h2 className="text-xl mb-1"><strong>{event.eventTitle}</strong></h2>
                         <p>{event.eventDescription}</p>
                         {
@@ -51,7 +52,7 @@ export default function EventCardComponent({ event, stepId, tripId }) {
                                 )
                             })
                         }
-                        <Link className="ms-auto mt-3 hover:cursor bg-[#4a5566] p-2 text-white rounded-lg text-xs" to={"/trips/" + tripId + "/" + stepId + "/" + event.eventId}>dettagli</Link>
+                        <Link className="ms-auto mt-3 hover:cursor bg-[#4a5566] p-2 text-white rounded-lg text-xs" to={`/trips/${trip.tripId}/${step.stepId}/${event.eventId}`}>dettagli</Link>
 
                     </div>
 

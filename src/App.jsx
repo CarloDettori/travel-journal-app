@@ -7,24 +7,23 @@ import TripsPage from "./pages/TripsPage.jsx";
 import EventPage from "./pages/EventPage.jsx";
 import MomentPage from "./pages/MomentPage.jsx";
 
-
 function App() {
-
   return (
     <GlobalProvider>
       <BrowserRouter>
         <Routes>
           <Route element={<DefaultLayout />}>
             <Route path="/" element={<HomePage />} />
-            <Route path="/trips" element={<TripsPage />} />
-            <Route path="/trips/:id" element={<StepsPage />} />
-            <Route path="/trips/:id/:id" element={<EventPage />} />
-            <Route path="/trips/:id/:id/:id" element={<MomentPage />} />
+            <Route path="/trips" element={<TripsPage />} />                {/* Lista viaggi */}
+            <Route path="/trips/:tripId" element={<StepsPage />} />        {/* Lista tappe */}
+            <Route path="/trips/:tripId/:stepId" element={<EventPage />} /> {/* Lista eventi */}
+            <Route path="/trips/:tripId/:stepId/:eventId" element={<MomentPage />} /> {/* Lista momenti */}
+
           </Route>
         </Routes>
       </BrowserRouter>
     </GlobalProvider>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "tripId": 1,
         "tripFrame": 1,
         "tripTheme": "land",
         "favourites": false,
@@ -503,7 +503,7 @@
         "price": 4000
     },
     {
-        "id": 2,
+        "tripId": 2,
         "tripFrame": 1,
         "tripTheme": "land",
         "favourites": true,
@@ -1006,7 +1006,7 @@
         "price": 6500
     },
     {
-        "id": 3,
+        "tripId": 3,
         "tripFrame": 2,
         "tripTheme": "land",
         "favourites": false,
@@ -1509,7 +1509,7 @@
         "price": 8500
     },
     {
-        "id": 4,
+        "tripId": 4,
         "tripFrame": 3,
         "tripTheme": "land",
         "favourites": true,

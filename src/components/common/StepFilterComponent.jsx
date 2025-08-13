@@ -7,13 +7,14 @@ import { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalContext.jsx"
 
 export default function StepFilterComponent() {
-    const { id } = useParams()
+    const { tripId } = useParams()
 
     const { trips, setTrips } = useContext(GlobalContext)
 
-    const steps = trips.find((trip) => trip.id.toString() === id)?.steps;
+    const steps = trips.find((trip) => trip.tripId === Number(tripId))?.steps;
 
-    console.log(steps)
+    console.log("tripId: ", tripId)
+    console.log("steps: ", steps)
 
 
     const [searchQuery, setSearchQuery] = useState("");
@@ -224,6 +225,7 @@ export default function StepFilterComponent() {
                             <StepCardComponent
                                 key={step.stepId}
                                 step={step}
+                                tripId={trips.tripId}
 
                             />
                         ))}
@@ -231,7 +233,7 @@ export default function StepFilterComponent() {
                 </>
             ) : (
                 <p>
-                    <strong>nessun viaggio trovato</strong>
+                    <strong>nessuna tappa trovata</strong>
                 </p>
             )}
         </>

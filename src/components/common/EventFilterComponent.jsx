@@ -6,14 +6,14 @@ import { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalContext.jsx"
 import EventCardComponent from "./EventCardComponent.jsx";
 
-export default function EventFilterComponent() {
-    const { id } = useParams()
+export default function EventFilterComponent({ events }) {
+    const { tripId, stepId } = useParams()
 
     const { trips, setTrips } = useContext(GlobalContext)
 
-    const trip = trips?.find((trip) => trip.id.toString() === id)
-    const step = trip?.steps.find((step) => step.stepId.toString() === id)
-    const events = step?.events || [];
+    const trip = trips?.find((trip) => trip.tripId === Number(tripId))
+    const step = trip?.steps.find((step) => step.stepId === Number(stepId))
+    //const events = step?.events || [];
     //console.log(events)
 
     const [searchQuery, setSearchQuery] = useState("");

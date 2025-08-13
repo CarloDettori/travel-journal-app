@@ -5,6 +5,7 @@ import { GlobalContext } from "../context/GlobalContext"
 
 export default function Header() {
 
+
     const { posts, setPosts, theme, setTheme } = useContext(GlobalContext)
     let logo = ""
     let texture = ""

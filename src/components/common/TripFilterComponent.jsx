@@ -212,8 +212,8 @@ export default function TripFilterComponent({ trips }) {
                         {/* Lista viaggi */}
                         {filteredTrips.map((trip) => (
                             <TripCardComponent
-                                key={trip.id}
-                                id={trip.id}
+                                key={trip.tripId}
+                                id={trip.tripId}
                                 trip={trip}
                             />
                         ))}

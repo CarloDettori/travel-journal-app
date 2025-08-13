@@ -6,14 +6,14 @@ import MomentFilterComponent from "../components/common/MomentFilterComponent.js
 
 export default function MomentPage() {
 
-    const { id } = useParams()
+    const { tripId, stepId, eventId } = useParams();
     console.log(id)
     const { trips, setTrips } = useContext(GlobalContext)
 
 
-    const trip = trips?.find((trip) => trip.id.toString() === id)
-    const step = trip?.steps.find((step) => step.stepId.toString() === id)
-    const event = step?.events.find((event) => event.eventId.toString() === id)
+    const trip = trips.find(trip => trip.tripId === Number(tripId));
+    const step = trip?.steps.find(step => step.stepId === Number(stepId));
+    const event = step?.events.find(event => event.eventId === Number(eventId));
 
 
     return (
