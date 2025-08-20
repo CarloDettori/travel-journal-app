@@ -168,6 +168,7 @@ export default function TripFilterComponent({ trips }) {
             ) : (
                 <p><strong>Nessun viaggio trovato</strong></p>
             )}
+
         </section>
     );
 }

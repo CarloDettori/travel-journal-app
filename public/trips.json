@@ -499,7 +499,7 @@
             }
         ],
         "sbat": 1,
-        "moneyEffort": 1,
+        "moneyEffort": 4,
         "price": 4000
     },
     {
@@ -1001,8 +1001,8 @@
                 ]
             }
         ],
-        "sbat": 2,
-        "moneyEffort": 2,
+        "sbat": 1,
+        "moneyEffort": 3,
         "price": 6500
     },
     {
@@ -1505,7 +1505,7 @@
             }
         ],
         "sbat": 3,
-        "moneyEffort": 3,
+        "moneyEffort": 5,
         "price": 8500
     },
     {
@@ -2007,7 +2007,7 @@
                 ]
             }
         ],
-        "sbat": 1,
+        "sbat": 4,
         "moneyEffort": 2,
         "price": 5000
     }

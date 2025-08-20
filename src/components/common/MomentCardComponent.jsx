@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 export default function MomentCardComponent({ moment }) {
 
     return (
-        < div className="flex items-center my-3 me-8">
+        < div className="flex items-center me-8">
 
             <img className="img-natural mx-3" src="/sprites/moment.png" alt="" />
 

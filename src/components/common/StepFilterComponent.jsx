@@ -160,17 +160,19 @@ export default function StepFilterComponent() {
             </div>
 
             {/* Lista tappe */}
-            {filteredSteps.length > 0 ? (
-                filteredSteps.map((step) => (
-                    <StepCardComponent
-                        key={step.stepId}
-                        step={step}
-                        tripId={tripId}
-                    />
-                ))
-            ) : (
-                <p><strong>Nessuna tappa trovata</strong></p>
-            )}
+            <div className="">
+                {filteredSteps.length > 0 ? (
+                    filteredSteps.map((step) => (
+                        <StepCardComponent
+                            key={step.stepId}
+                            step={step}
+                            tripId={tripId}
+                        />
+                    ))
+                ) : (
+                    <p><strong>Nessuna tappa trovata</strong></p>
+                )}
+            </div>
         </>
     );
 }

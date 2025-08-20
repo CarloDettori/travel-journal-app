@@ -9,7 +9,7 @@ export default function EventCardComponent({ event, stepId, tripId }) {
     return (
         clickedEventId !== event.eventId
             ?
-            < div className="flex items-center my-3 me-8" onClick={() => { setClickedEventId(event.eventId) }} >
+            < div className="flex items-center me-8" onClick={() => { setClickedEventId(event.eventId) }} >
                 <img className="img-natural mx-3" src="/sprites/event.png" alt="" />
 
                 <div className="hover:poiter">
@@ -17,7 +17,9 @@ export default function EventCardComponent({ event, stepId, tripId }) {
                     <FrameComponent >
 
                         <div className="p-3">
-                            <h2 className="text-xl mb-1"><strong>{event.eventTitle}</strong></h2>
+                            <div className="flex">
+                                <h2 className="text-xl mb-1 me-2"><strong>{event.eventTitle}</strong></h2>{event.icons.map((icon, index) => <img className="img-natural my-auto mx-1" src={icon} alt="" />)}
+                            </div>
                             <p>{event.eventDescription}</p>
                         </div>
 
@@ -31,7 +33,7 @@ export default function EventCardComponent({ event, stepId, tripId }) {
             :
 
 
-            <div className="flex items-center my-3 me-8 ">
+            <div className="flex items-center me-8 ">
 
                 <img className="img-natural mx-3" src="/sprites/event.png" alt="" />
 
@@ -40,8 +42,8 @@ export default function EventCardComponent({ event, stepId, tripId }) {
 
                     <div className="p-3 flex flex-col">
 
-                        <h2 className="text-xl mb-1"><strong>{event.eventTitle}</strong></h2>
-                        <p>{event.eventDescription}</p>
+                        <h2 className="text-xl mb-2"><strong>{event.eventTitle}</strong></h2>
+                        <p className=" mb-2"> {event.eventDescription}</p>
                         {
                             event.moments.map((moment) => {
                                 return (
@@ -52,6 +54,11 @@ export default function EventCardComponent({ event, stepId, tripId }) {
                                 )
                             })
                         }
+                        <div className="flex">
+                            {
+                                event.mood.map((m, index) => <p className="text-sm pe-2 pt-3" key={index + 1}>{m}</p>)
+                            }
+                        </div>
                         <Link className="ms-auto mt-3 hover:cursor bg-[#4a5566] p-2 text-white rounded-lg text-xs" to={`/trips/${tripId}/${stepId}/${event.eventId}`}>dettagli</Link>
 
                     </div>

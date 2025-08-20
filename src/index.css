@@ -26,9 +26,16 @@ body {
     box-sizing: border-box;
 }
 
+section {
+    -ms-overflow-style: none;
+
+    scrollbar-width: none;
+}
+
 header {
     height: 64px;
 }
+
 
 .frame-row {
     display: flex;

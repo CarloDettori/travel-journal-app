@@ -4,10 +4,10 @@ export default function FrameComponent({ children }) {
 
     const [frameNumber, setFrameNumber] = useState(1);
 
-    const frameUrl = (suffix) => `url("/frames/frame${frameNumber}${suffix}.png")`;
+    const frameUrl = (direction) => `url("/frames/frame${frameNumber}${direction}.png")`;
 
     return (
-        <div className="card-wrapper">
+        <div className="py-3">
             {/* Top */}
             <div className="frame-row">
                 <div className="frame-corner" style={{ backgroundImage: frameUrl("a") }}></div>
@@ -28,6 +28,6 @@ export default function FrameComponent({ children }) {
                 <div className="frame-hori" style={{ backgroundImage: frameUrl("l"), transform: "scaleY(-1)" }}></div>
                 <div className="frame-corner" style={{ backgroundImage: frameUrl("a"), transform: "scale(-1, -1)" }}></div>
             </div>
-        </div>
+        </div >
     );
 }
