@@ -6,7 +6,7 @@ export default function TripPage() {
     const { trips } = useContext(GlobalContext);
 
     return (
-        <section className="w-full overflow-y-scroll">
+        <section className="w-700 overflow-y-scroll">
             <h1 className="text-2xl mb-10 text-center">VIAGGI DISPONIBILI</h1>
             <TripFilterComponent trips={trips} />
         </section>

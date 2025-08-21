@@ -149,13 +149,15 @@ export default function MomentFilterComponent() {
             </div>
 
             {/* Lista momenti */}
-            {filteredMoments.length > 0 ? (
-                filteredMoments.map((moment) => (
-                    <MomentCardComponent key={moment.momentId} moment={moment} />
-                ))
-            ) : (
-                <p><strong>Nessun momento trovato</strong></p>
-            )}
+            <div className="w-200 mx-auto">
+                {filteredMoments.length > 0 ? (
+                    filteredMoments.map((moment) => (
+                        <MomentCardComponent key={moment.momentId} moment={moment} />
+                    ))
+                ) : (
+                    <p><strong>Nessun momento trovato</strong></p>
+                )}
+            </div>
         </>
     );
 }

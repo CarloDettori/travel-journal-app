@@ -122,7 +122,7 @@ export default function TripFilterComponent({ trips }) {
     }, [trips, searchQuery, selectValue, sortBy, sortOrder]);
 
     return (
-        <section className="w-full">
+        <section>
             {/* Filtro testo */}
             <div className="pb-3">
                 <label><strong>Cerca un viaggio</strong></label>

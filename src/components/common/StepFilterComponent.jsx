@@ -160,7 +160,7 @@ export default function StepFilterComponent() {
             </div>
 
             {/* Lista tappe */}
-            <div className="">
+            <div className="w-200 mx-auto">
                 {filteredSteps.length > 0 ? (
                     filteredSteps.map((step) => (
                         <StepCardComponent

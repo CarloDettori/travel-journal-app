@@ -9,13 +9,13 @@ export default function MomentCardComponent({ moment }) {
 
             <img className="img-natural mx-3" src="/sprites/moment.png" alt="" />
 
-            <div className="hover:poiter">
+            <div className="hover:poiter w-full">
 
                 <FrameComponent >
 
                     <div className="p-3">
                         <p>{moment.momentDescription}</p>
-                        <img className="py-1" src={moment.momentImg} alt="" />
+                        <img className="my-3 mx-auto rounded" src={moment.momentImg} alt="" />
                         <p>{moment.tags.map((tag) => tag + " ")}</p>
                     </div>
 

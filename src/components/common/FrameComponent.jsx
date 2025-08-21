@@ -7,7 +7,7 @@ export default function FrameComponent({ children }) {
     const frameUrl = (direction) => `url("/frames/frame${frameNumber}${direction}.png")`;
 
     return (
-        <div className="py-3">
+        <div className="py-3 w-full">
             {/* Top */}
             <div className="frame-row">
                 <div className="frame-corner" style={{ backgroundImage: frameUrl("a") }}></div>

@@ -157,18 +157,20 @@ export default function EventFilterComponent() {
             </div>
 
             {/* Lista eventi */}
-            {filteredEvents.length > 0 ? (
-                filteredEvents.map((event) => (
-                    <EventCardComponent
-                        key={event.eventId}
-                        event={event}
-                        stepId={stepId}
-                        tripId={tripId}
-                    />
-                ))
-            ) : (
-                <p><strong>Nessun evento trovato</strong></p>
-            )}
+            <div className="w-200 mx-auto">
+                {filteredEvents.length > 0 ? (
+                    filteredEvents.map((event) => (
+                        <EventCardComponent
+                            key={event.eventId}
+                            event={event}
+                            stepId={stepId}
+                            tripId={tripId}
+                        />
+                    ))
+                ) : (
+                    <p><strong>Nessun evento trovato</strong></p>
+                )}
+            </div>
         </>
     );
 }

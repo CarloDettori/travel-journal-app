@@ -28,7 +28,7 @@ body {
 
 section {
     -ms-overflow-style: none;
-
+    margin: 0 auto;
     scrollbar-width: none;
 }
 

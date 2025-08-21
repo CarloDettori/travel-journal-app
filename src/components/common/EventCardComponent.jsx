@@ -9,10 +9,10 @@ export default function EventCardComponent({ event, stepId, tripId }) {
     return (
         clickedEventId !== event.eventId
             ?
-            < div className="flex items-center me-8" onClick={() => { setClickedEventId(event.eventId) }} >
+            < div className="flex items-center me-8 w-full" onClick={() => { setClickedEventId(event.eventId) }} >
                 <img className="img-natural mx-3" src="/sprites/event.png" alt="" />
 
-                <div className="hover:poiter">
+                <div className="hover:poiter w-full">
 
                     <FrameComponent >
 
