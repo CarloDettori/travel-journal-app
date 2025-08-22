@@ -6,9 +6,9 @@ export default function TripCardComponent({ trip }) {
     console.log(trip)
 
     return (
-        <Link className="hover:cursor flex w-full" to={`/trips/${trip.tripId}`}>
+        <Link className=" flex w-full" to={`/trips/${trip.tripId}`}>
             <FrameComponent >
-                <div className="flex justify-between">
+                <div className="flex justify-between hover:cursor">
                     <div className="p-3 flex flex-col justify-between">
                         <h2><strong className="text-xl" >{trip.tripTitle}</strong></h2>
                         <p className="text-sm py-1">{trip.tripDescription}</p>

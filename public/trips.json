@@ -41,6 +41,7 @@
                                 "momentId": 1,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Mi hanno fatto un ritratto!",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#cose",
                                     "#gente",
@@ -51,6 +52,7 @@
                                 "momentId": 2,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Panorama sulla città",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#panorama",
                                     "#parigi",
@@ -61,6 +63,7 @@
                                 "momentId": 3,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Caffè in piazza",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#cibo",
                                     "#relax",
@@ -89,6 +92,7 @@
                                 "momentId": 4,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Foto dalla cima",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#parigi",
                                     "#vista",
@@ -99,6 +103,7 @@
                                 "momentId": 5,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Street food sotto la torre",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#cibo",
                                     "#parigi",
@@ -109,6 +114,7 @@
                                 "momentId": 6,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Spettacolo di luci",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#notte",
                                     "#luci",
@@ -137,6 +143,7 @@
                                 "momentId": 7,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Vista della Gioconda",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#arte",
                                     "#louvre",
@@ -147,6 +154,7 @@
                                 "momentId": 8,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Sculture antiche",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#arte",
                                     "#scultura",
@@ -157,6 +165,7 @@
                                 "momentId": 9,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Cortile interno",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#architettura",
                                     "#francia",
@@ -204,6 +213,7 @@
                                 "momentId": 10,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Formaggi stagionati",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#cibo",
                                     "#formaggi",
@@ -214,6 +224,7 @@
                                 "momentId": 11,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Vini locali",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#vino",
                                     "#degustazione",
@@ -224,6 +235,7 @@
                                 "momentId": 12,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Spezie colorate",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#spezie",
                                     "#mercato",
@@ -252,6 +264,7 @@
                                 "momentId": 13,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Vetrate colorate",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#arte",
                                     "#chiesa",
@@ -262,6 +275,7 @@
                                 "momentId": 14,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Organo antico",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#musica",
                                     "#storia",
@@ -272,6 +286,7 @@
                                 "momentId": 15,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Campanile panoramico",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#panorama",
                                     "#architettura",
@@ -300,6 +315,7 @@
                                 "momentId": 16,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Giardino delle rose",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#natura",
                                     "#fiori",
@@ -310,6 +326,7 @@
                                 "momentId": 17,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Lago centrale",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#lago",
                                     "#barca",
@@ -320,6 +337,7 @@
                                 "momentId": 18,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Zoo gratuito",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#animali",
                                     "#famiglia",
@@ -367,6 +385,7 @@
                                 "momentId": 19,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Pescherecci in arrivo",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#mare",
                                     "#porto",
@@ -377,6 +396,7 @@
                                 "momentId": 20,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Mercato del pesce",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#pesce",
                                     "#cibo",
@@ -387,6 +407,7 @@
                                 "momentId": 21,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Tramonto sul porto",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#tramonto",
                                     "#mare",
@@ -415,6 +436,7 @@
                                 "momentId": 22,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Panorama a 360°",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#panorama",
                                     "#marsiglia",
@@ -425,6 +447,7 @@
                                 "momentId": 23,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Interni decorati",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#chiesa",
                                     "#arte",
@@ -435,6 +458,7 @@
                                 "momentId": 24,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Scalinata monumentale",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#architettura",
                                     "#marsiglia",
@@ -463,6 +487,7 @@
                                 "momentId": 25,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Acqua cristallina",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#mare",
                                     "#nuoto",
@@ -473,6 +498,7 @@
                                 "momentId": 26,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Scogliere bianche",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#natura",
                                     "#scogliere",
@@ -483,6 +509,7 @@
                                 "momentId": 27,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Pic-nic sulla spiaggia",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#spiaggia",
                                     "#relax",
@@ -544,6 +571,7 @@
                                 "momentId": 28,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Folla in movimento",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#tokyo",
                                     "#città",
@@ -554,6 +582,7 @@
                                 "momentId": 29,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Vista dall'alto",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#panorama",
                                     "#città",
@@ -564,6 +593,7 @@
                                 "momentId": 30,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Cartelloni luminosi",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#notte",
                                     "#luci",
@@ -592,6 +622,7 @@
                                 "momentId": 31,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Ingresso Kaminarimon",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#tradizione",
                                     "#giappone",
@@ -602,6 +633,7 @@
                                 "momentId": 32,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Pagoda a cinque piani",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#architettura",
                                     "#storia",
@@ -612,6 +644,7 @@
                                 "momentId": 33,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Bancarelle di souvenir",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#shopping",
                                     "#tokyo",
@@ -640,6 +673,7 @@
                                 "momentId": 34,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Sakura in piena fioritura",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#natura",
                                     "#primavera",
@@ -650,6 +684,7 @@
                                 "momentId": 35,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Picnic sotto i ciliegi",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#giappone",
                                     "#relax",
@@ -660,6 +695,7 @@
                                 "momentId": 36,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Laghetti e ponti",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#paesaggio",
                                     "#giappone",
@@ -707,6 +743,7 @@
                                 "momentId": 37,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Corridoio rosso infinito",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#kyoto",
                                     "#giappone",
@@ -717,6 +754,7 @@
                                 "momentId": 38,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Panorama dalla collina",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#vista",
                                     "#natura",
@@ -727,6 +765,7 @@
                                 "momentId": 39,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Tempio principale",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#religione",
                                     "#shintoismo",
@@ -755,6 +794,7 @@
                                 "momentId": 40,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Riflesso sul lago",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#kyoto",
                                     "#giappone",
@@ -765,6 +805,7 @@
                                 "momentId": 41,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Giardini curati",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#giappone",
                                     "#natura",
@@ -775,6 +816,7 @@
                                 "momentId": 42,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Dettagli architettonici dorati",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#arte",
                                     "#architettura",
@@ -803,6 +845,7 @@
                                 "momentId": 43,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Stradine illuminate",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#kyoto",
                                     "#giappone",
@@ -813,6 +856,7 @@
                                 "momentId": 44,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Incontro con una geisha",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#giappone",
                                     "#cultura",
@@ -823,6 +867,7 @@
                                 "momentId": 45,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Case in legno antico",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#architettura",
                                     "#giappone",
@@ -870,6 +915,7 @@
                                 "momentId": 46,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Insegna del granchio gigante",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#osaka",
                                     "#giappone",
@@ -880,6 +926,7 @@
                                 "momentId": 47,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Okonomiyaki fumante",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#cibo",
                                     "#osaka",
@@ -890,6 +937,7 @@
                                 "momentId": 48,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Canale illuminato",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#notte",
                                     "#osaka",
@@ -918,6 +966,7 @@
                                 "momentId": 49,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Vista dalla torre",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#osaka",
                                     "#giappone",
@@ -928,6 +977,7 @@
                                 "momentId": 50,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Giardini esterni",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#giappone",
                                     "#natura",
@@ -938,6 +988,7 @@
                                 "momentId": 51,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Museo interno",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#storia",
                                     "#giappone",
@@ -966,6 +1017,7 @@
                                 "momentId": 52,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Sushi fresco",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#cibo",
                                     "#giappone",
@@ -976,6 +1028,7 @@
                                 "momentId": 53,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Frutti di mare esposti",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#mare",
                                     "#giappone",
@@ -986,6 +1039,7 @@
                                 "momentId": 54,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Dolci tipici giapponesi",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#dessert",
                                     "#giappone",
@@ -1047,6 +1101,7 @@
                                 "momentId": 55,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Cartelloni luminosi",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#nyc",
                                     "#usa",
@@ -1057,6 +1112,7 @@
                                 "momentId": 56,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Folla di turisti",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#città",
                                     "#turismo",
@@ -1067,6 +1123,7 @@
                                 "momentId": 57,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Street performer",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#arte",
                                     "#strada",
@@ -1095,6 +1152,7 @@
                                 "momentId": 58,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Picnic al sole",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#parco",
                                     "#nyc",
@@ -1105,6 +1163,7 @@
                                 "momentId": 59,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Laghetti con barche",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#natura",
                                     "#nyc",
@@ -1115,6 +1174,7 @@
                                 "momentId": 60,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Concerti all'aperto",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#musica",
                                     "#nyc",
@@ -1143,6 +1203,7 @@
                                 "momentId": 61,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Vista dal traghetto",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#liberty",
                                     "#nyc",
@@ -1153,6 +1214,7 @@
                                 "momentId": 62,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Base della statua",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#storia",
                                     "#nyc",
@@ -1163,6 +1225,7 @@
                                 "momentId": 63,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Panorama skyline",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#nyc",
                                     "#panorama",
@@ -1210,6 +1273,7 @@
                                 "momentId": 64,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Hotel iconici",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#vegas",
                                     "#usa",
@@ -1220,6 +1284,7 @@
                                 "momentId": 65,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Fontane danzanti",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#spettacolo",
                                     "#vegas",
@@ -1230,6 +1295,7 @@
                                 "momentId": 66,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Show dal vivo",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#musica",
                                     "#vegas",
@@ -1258,6 +1324,7 @@
                                 "momentId": 67,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Slot machine luminose",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#gioco",
                                     "#vegas",
@@ -1268,6 +1335,7 @@
                                 "momentId": 68,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Roulette in azione",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#casino",
                                     "#vegas",
@@ -1278,6 +1346,7 @@
                                 "momentId": 69,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Tavolo da poker",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#poker",
                                     "#vegas",
@@ -1306,6 +1375,7 @@
                                 "momentId": 70,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Vista aerea",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#natura",
                                     "#canyon",
@@ -1316,6 +1386,7 @@
                                 "momentId": 71,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Scorci rocciosi",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#paesaggio",
                                     "#usa",
@@ -1326,6 +1397,7 @@
                                 "momentId": 72,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Fiume Colorado",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#natura",
                                     "#fiume",
@@ -1373,6 +1445,7 @@
                                 "momentId": 73,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Vista dalla baia",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#ponte",
                                     "#usa",
@@ -1383,6 +1456,7 @@
                                 "momentId": 74,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Passeggiata sul ponte",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#ponte",
                                     "#vista",
@@ -1393,6 +1467,7 @@
                                 "momentId": 75,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Tramonto dietro le torri",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#tramonto",
                                     "#ponte",
@@ -1421,6 +1496,7 @@
                                 "momentId": 76,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Celle storiche",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#storia",
                                     "#carcere",
@@ -1431,6 +1507,7 @@
                                 "momentId": 77,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Vista sulla baia",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#panorama",
                                     "#sf",
@@ -1441,6 +1518,7 @@
                                 "momentId": 78,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Leggende di fuga",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#mistero",
                                     "#usa",
@@ -1469,6 +1547,7 @@
                                 "momentId": 79,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Vista sulle colline",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#sf",
                                     "#usa",
@@ -1479,6 +1558,7 @@
                                 "momentId": 80,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Tram in corsa",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#trasporto",
                                     "#sf",
@@ -1489,6 +1569,7 @@
                                 "momentId": 81,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Centro città",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#città",
                                     "#sf",
@@ -1550,6 +1631,7 @@
                                 "momentId": 82,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Arena interna",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#roma",
                                     "#colosseo",
@@ -1560,6 +1642,7 @@
                                 "momentId": 83,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Facciata esterna",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#roma",
                                     "#italia",
@@ -1570,6 +1653,7 @@
                                 "momentId": 84,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Vista panoramica",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#roma",
                                     "#storia",
@@ -1598,6 +1682,7 @@
                                 "momentId": 85,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Scultura centrale",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#roma",
                                     "#fontana",
@@ -1608,6 +1693,7 @@
                                 "momentId": 86,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Turisti in fila",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#roma",
                                     "#turismo",
@@ -1618,6 +1704,7 @@
                                 "momentId": 87,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Getto della moneta",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#roma",
                                     "#desiderio",
@@ -1646,6 +1733,7 @@
                                 "momentId": 88,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Cappella Sistina",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#arte",
                                     "#vaticano",
@@ -1656,6 +1744,7 @@
                                 "momentId": 89,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Galleria delle mappe",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#arte",
                                     "#museo",
@@ -1666,6 +1755,7 @@
                                 "momentId": 90,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Cortile interno",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#architettura",
                                     "#roma",
@@ -1713,6 +1803,7 @@
                                 "momentId": 91,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Vista dalla cupola",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#firenze",
                                     "#duomo",
@@ -1723,6 +1814,7 @@
                                 "momentId": 92,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Facciata gotica",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#firenze",
                                     "#duomo",
@@ -1733,6 +1825,7 @@
                                 "momentId": 93,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Interni affrescati",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#firenze",
                                     "#arte",
@@ -1761,6 +1854,7 @@
                                 "momentId": 94,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Nascita di Venere",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#arte",
                                     "#uffizi",
@@ -1771,6 +1865,7 @@
                                 "momentId": 95,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Primavera di Botticelli",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#arte",
                                     "#uffizi",
@@ -1781,6 +1876,7 @@
                                 "momentId": 96,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Veduta sul fiume Arno",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#firenze",
                                     "#uffizi",
@@ -1809,6 +1905,7 @@
                                 "momentId": 97,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Vista dal lungarno",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#firenze",
                                     "#ponte",
@@ -1819,6 +1916,7 @@
                                 "momentId": 98,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Botteghe storiche",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#firenze",
                                     "#pontevecchio",
@@ -1829,6 +1927,7 @@
                                 "momentId": 99,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Tramonto sul ponte",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#firenze",
                                     "#tramonto",
@@ -1876,6 +1975,7 @@
                                 "momentId": 100,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Basilica di San Marco",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#venezia",
                                     "#piazza",
@@ -1886,6 +1986,7 @@
                                 "momentId": 101,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Campanile di San Marco",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#venezia",
                                     "#campanile",
@@ -1896,6 +1997,7 @@
                                 "momentId": 102,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Piccioni in piazza",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#venezia",
                                     "#piazza",
@@ -1924,6 +2026,7 @@
                                 "momentId": 103,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Ponti romantici",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#venezia",
                                     "#gondola",
@@ -1934,6 +2037,7 @@
                                 "momentId": 104,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Canali silenziosi",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#venezia",
                                     "#canale",
@@ -1944,6 +2048,7 @@
                                 "momentId": 105,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Scorci pittoreschi",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#venezia",
                                     "#panorama",
@@ -1972,6 +2077,7 @@
                                 "momentId": 106,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Vetri artistici di Murano",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#murano",
                                     "#vetro",
@@ -1982,6 +2088,7 @@
                                 "momentId": 107,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Case colorate di Burano",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#burano",
                                     "#colori",
@@ -1992,6 +2099,7 @@
                                 "momentId": 108,
                                 "momentImg": "https://placehold.co/500x400",
                                 "momentDescription": "Passeggiata tra i vicoli",
+                                "momentFrame": 1,
                                 "tags": [
                                     "#burano",
                                     "#murano",
