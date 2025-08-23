@@ -12,25 +12,25 @@ export default function DefaultLayout() {
 
     switch (theme) {
 
-        case "land":
+        case 1:
             url = 'url("/textures/grass.png")';
             splitter = 'url("/splitter/fance.png")';
             bgcolor = "#72cca4"
             break;
 
-        case "beach":
+        case 2:
             url = 'url("/textures/sand.png")';
             splitter = 'url("/splitter/logs.png")';
             bgcolor = "#eae086"
             break;
 
-        case "city":
+        case 3:
             url = 'url("/textures/marciapiede.png")';
             splitter = 'url("/splitter/rail.png")';
             bgcolor = "#dee6e6"
             break;
 
-        case "snow":
+        case 4:
             url = 'url("/textures/snow.png")';
             splitter = 'url("/sprites/snowrock.png")';
             bgcolor = "#eeeef6"

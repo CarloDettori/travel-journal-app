@@ -13,22 +13,22 @@ export default function Header() {
 
 
     switch (theme) {
-        case "land":
+        case 1:
             texture = 'url("/textures/water.png")';
             edge = 'url("/edges/grownd-water-up.png")';
             logo = "/public/sprites/ship.png"
             break;
-        case "beach":
+        case 2:
             texture = 'url("/textures/pontile.png")';
             edge = 'url("/edges/pontile-base.png")';
             logo = "/public/sprites/bike1.png"
             break;
-        case "city":
+        case 3:
             texture = 'url("/textures/road.png")';
             edge = 'url("/edges/marciapiede-road.png")';
             logo = "/public/sprites/truck.png"
             break;
-        case "snow":
+        case 4:
             texture = 'url("/textures/ice.png")';
             edge = 'url("/edges/water-snow-up.png")';
             logo = "/public/sprites/boat.png"

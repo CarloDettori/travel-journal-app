@@ -5,7 +5,7 @@ const GlobalProvider = ({ children }) => {
 
     const [trips, setTrips] = useState([])
 
-    const [theme, setTheme] = useState("land")
+    const [theme, setTheme] = useState(1)
     const [tripTheme, setTripTheme] = useState(theme)
     const [stepTheme, setStepTheme] = useState(theme)
 

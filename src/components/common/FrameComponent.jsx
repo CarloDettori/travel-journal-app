@@ -7,9 +7,9 @@ export default function FrameComponent({ children }) {
     const frameUrl = (direction) => `url("/frames/frame${frameNumber}${direction}.png")`;
 
     return (
-        <div className="flex flex-col w-full">
+        <div className="flex w-full items-center">
 
-            <div className="pt-3 w-full">
+            <div className="pt-3 ps-4 w-full">
                 {/* Top */}
                 <div className="frame-row">
                     <div className="frame-corner" style={{ backgroundImage: frameUrl("a") }}></div>
@@ -36,16 +36,16 @@ export default function FrameComponent({ children }) {
 
             </div >
 
-            <div onClick={e => { e.preventDefault(); e.stopPropagation() }} className="flex items-center pt-1 pb-2 hover:pointer">
-                {frameNumber === 1 ?
-                    <img style={{ transform: "scaleX(-1)" }} className="px-1" onClick={(e) => { e.preventDefault(); e.stopPropagation(), setFrameNumber(26) }} src="/hud/arrow-right.png" alt="" />
-                    :
-                    <img style={{ transform: "scaleX(-1)" }} className="px-1" onClick={(e) => { e.preventDefault(); e.stopPropagation(), setFrameNumber(frameNumber - 1) }} src="/hud/arrow-right.png" alt="" />}
-                <p className="text-sm ps-1">{frameNumber}</p>
+            <div onClick={e => { e.preventDefault(); e.stopPropagation() }} className="flex flex-col items-center hover:pointer">
                 {frameNumber === 26 ?
-                    <img className="px-1" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setFrameNumber(1) }} src="/hud/arrow-right.png" alt="" />
+                    <img className="px-1" onClick={(e) => { e.preventDefault(); e.stopPropagation(), setFrameNumber(1) }} src="/hud/arrow-up.png" alt="" />
                     :
-                    <img className="px-1" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setFrameNumber(frameNumber + 1) }} src="/hud/arrow-right.png" alt="" />}
+                    <img className="px-1" onClick={(e) => { e.preventDefault(); e.stopPropagation(), setFrameNumber(frameNumber + 1) }} src="/hud/arrow-up.png" alt="" />}
+                <p className="text-sm ps-1">{frameNumber}</p>
+                {frameNumber === 1 ?
+                    <img style={{ transform: "scaleY(-1)" }} className="px-1" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setFrameNumber(26) }} src="/hud/arrow-up.png" alt="" />
+                    :
+                    <img style={{ transform: "scaleY(-1)" }} className="px-1" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setFrameNumber(frameNumber - 1) }} src="/hud/arrow-up.png" alt="" />}
             </div>
         </div>
     );

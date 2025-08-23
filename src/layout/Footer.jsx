@@ -14,22 +14,22 @@ export default function Footer() {
 
     switch (theme) {
 
-        case "land":
+        case 1:
             edge = 'url("/edges/grass-sand.png")';
             texture = 'url("/textures/sand.png")';
             break;
 
-        case "beach":
+        case 2:
             edge = 'url("/edges/sand-water.png")';
             texture = 'url("/textures/water2.png")';
             break;
 
-        case "city":
+        case 3:
             edge = 'url("/edges/marciapiede-grass.png")';
             texture = 'url("/textures/grass.png")';
             break;
 
-        case "snow":
+        case 4:
             edge = 'url("/edges/grownd-water.png")';
             texture = 'url("/textures/water.png")';
             break;
@@ -46,7 +46,24 @@ export default function Footer() {
                 backgroundImage: texture,
                 height: "32px"
             }}>
+                <div onClick={e => { e.preventDefault(); e.stopPropagation() }} className="flex justify-center items-center pt-1 pb-2">
+                    {theme === 1 ?
+                        <img style={{ transform: "scaleX(-1)" }} className="px-1 hover:cursor" onClick={() => { setTheme(4) }} src="/hud/arrow-right.png" alt="" />
+                        :
+                        <img style={{ transform: "scaleX(-1)" }} className="px-1 hover:cursor" onClick={() => { setTheme(theme - 1) }} src="/hud/arrow-right.png" alt="" />}
 
+                    <p className="text-sm ps-1">
+                        {theme === 1 ? "prato" : ""}
+                        {theme === 2 ? "spiaggia" : ""}
+                        {theme === 3 ? "città" : ""}
+                        {theme === 4 ? "ghiaccio" : ""}
+                    </p>
+
+                    {theme === 4 ?
+                        <img className="px-1 hover:cursor" onClick={(e) => { setTheme(1) }} src="/hud/arrow-right.png" alt="" />
+                        :
+                        <img className="px-1 hover:cursor" onClick={(e) => { setTheme(theme + 1) }} src="/hud/arrow-right.png" alt="" />}
+                </div>
             </footer >
 
         </>
