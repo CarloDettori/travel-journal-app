@@ -52,7 +52,7 @@ export default function Footer() {
                         :
                         <img style={{ transform: "scaleX(-1)" }} className="px-1 hover:cursor" onClick={() => { setTheme(theme - 1) }} src="/hud/arrow-right.png" alt="" />}
 
-                    <p className="text-sm ps-1">
+                    <p className=" text-center w-20 text-sm ps-1 ">
                         {theme === 1 ? "prato" : ""}
                         {theme === 2 ? "spiaggia" : ""}
                         {theme === 3 ? "città" : ""}

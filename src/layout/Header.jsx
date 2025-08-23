@@ -41,12 +41,12 @@ export default function Header() {
                 <Link to="/" className="flex items-center" >
                     <img src={logo} className="img-natural" alt="logoIMG" />
                 </Link>
-                <nav className="flex px-8 gap-10 text-lg items-center justify-evenly w-full">
+                <nav className="flex px-8 gap-10 text-lg items-center justify-center gap-20 w-full">
 
 
-                    <NavLink className="navlink" to="/trips"><strong>VIAGGI</strong></NavLink>
+                    {theme === 3 ? <NavLink className="navlink p-1 bg-[#515a63] text-white rounded-lg " to="/trips"><strong>VIAGGI</strong></NavLink> : <NavLink className="navlink" to="/trips"><strong>VIAGGI</strong></NavLink>}
 
-                    <NavLink className="navlink" to="/photos"><strong>FOTO</strong></NavLink>
+                    {theme === 3 ? <NavLink className="navlink p-1 bg-[#515a63] text-white rounded-lg " to="/photos"><strong>FOTO</strong></NavLink> : <NavLink className="navlink" to="/photos"><strong>FOTO</strong></NavLink>}
 
                     {/* <NavLink className="navlink" to="/tripsphotos"><strong >FOTOGRAFIE</strong></NavLink> */}
 
