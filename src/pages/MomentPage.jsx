@@ -17,7 +17,7 @@ export default function MomentPage() {
             <h1 className="text-2xl mb-10 text-center">
                 MOMENTI MEMORABILI DELL'EVENTO: {event?.eventTitle || "Non trovato"}
             </h1>
-            <MomentFilterComponent moments={moments} />
+            <MomentFilterComponent />
         </section>
     );
 }

@@ -19,7 +19,7 @@ export default function EventPage() {
             <h1 className="text-2xl mb-10 text-center">
                 EVENTI DELLA TAPPA: {step?.stepTitle || "Non trovato"}
             </h1>
-            <EventFilterComponent events={events} tripId={tripId} stepId={stepId} />
+            <EventFilterComponent />
         </section>
     );
 }

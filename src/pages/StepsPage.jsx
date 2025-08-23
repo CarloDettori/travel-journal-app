@@ -15,7 +15,7 @@ export default function StepPage() {
             <h1 className="text-2xl mb-10 text-center">
                 TAPPE DEL VIAGGIO: {trip?.tripTitle || "Non trovato"}
             </h1>
-            <StepFilterComponent steps={steps} tripId={tripId} />
+            <StepFilterComponent />
         </section>
     );
 }

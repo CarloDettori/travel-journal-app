@@ -79,7 +79,10 @@ header {
     min-width: 64px;
 }
 
+.photo {
+    width: calc(33vw - 225px);
 
+}
 
 
 @import "tailwindcss";

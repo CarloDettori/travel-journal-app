@@ -162,13 +162,15 @@ export default function StepFilterComponent() {
             {/* Lista tappe */}
             <div className="w-200 mx-auto">
                 {filteredSteps.length > 0 ? (
-                    filteredSteps.map((step) => (
-                        <StepCardComponent
-                            key={step.stepId}
-                            step={step}
-                            tripId={tripId}
-                        />
-                    ))
+                    <div className="flex flex-col gap-3">
+                        {filteredSteps.map((step) => (
+                            <StepCardComponent
+                                key={step.stepId}
+                                step={step}
+                                tripId={tripId}
+                            />
+                        ))}
+                    </div>
                 ) : (
                     <p><strong>Nessuna tappa trovata</strong></p>
                 )}

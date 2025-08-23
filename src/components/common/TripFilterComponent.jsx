@@ -162,9 +162,11 @@ export default function TripFilterComponent({ trips }) {
 
             {/* Lista viaggi */}
             {filteredTrips.length > 0 ? (
-                filteredTrips.map((trip) => (
-                    <TripCardComponent key={trip.tripId} trip={trip} />
-                ))
+                <div className="flex flex-col gap-3">
+                    {filteredTrips.map((trip) => (
+                        <TripCardComponent key={trip.tripId} trip={trip} />
+                    ))}
+                </div>
             ) : (
                 <p><strong>Nessun viaggio trovato</strong></p>
             )}

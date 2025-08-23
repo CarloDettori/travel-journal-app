@@ -150,10 +150,14 @@ export default function MomentFilterComponent() {
 
             {/* Lista momenti */}
             <div className="w-200 mx-auto">
+
                 {filteredMoments.length > 0 ? (
-                    filteredMoments.map((moment) => (
-                        <MomentCardComponent key={moment.momentId} moment={moment} />
-                    ))
+                    <div className="flex flex-col gap-3">
+                        {filteredMoments.map((moment) => (
+                            <MomentCardComponent key={moment.momentId} moment={moment} />
+                        ))}
+                    </div>
+
                 ) : (
                     <p><strong>Nessun momento trovato</strong></p>
                 )}

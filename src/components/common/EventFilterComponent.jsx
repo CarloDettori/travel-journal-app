@@ -159,14 +159,16 @@ export default function EventFilterComponent() {
             {/* Lista eventi */}
             <div className="w-200 mx-auto">
                 {filteredEvents.length > 0 ? (
-                    filteredEvents.map((event) => (
-                        <EventCardComponent
-                            key={event.eventId}
-                            event={event}
-                            stepId={stepId}
-                            tripId={tripId}
-                        />
-                    ))
+                    <div className="flex flex-col gap-3">
+                        {filteredEvents.map((event) => (
+                            <EventCardComponent
+                                key={event.eventId}
+                                event={event}
+                                stepId={stepId}
+                                tripId={tripId}
+                            />
+                        ))}
+                    </div>
                 ) : (
                     <p><strong>Nessun evento trovato</strong></p>
                 )}

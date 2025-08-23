@@ -33,7 +33,7 @@ export default function EventCardComponent({ event, stepId, tripId }) {
             :
 
 
-            <div className="flex items-center me-8 ">
+            <div className="flex items-center me-8 w-full">
 
                 <img className="img-natural mx-3" src="/sprites/event.png" alt="" />
 

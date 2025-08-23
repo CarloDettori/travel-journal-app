@@ -46,6 +46,8 @@ export default function Header() {
 
                     <NavLink className="navlink" to="/trips"><strong>VIAGGI</strong></NavLink>
 
+                    <NavLink className="navlink" to="/photos"><strong>FOTO</strong></NavLink>
+
                     {/* <NavLink className="navlink" to="/tripsphotos"><strong >FOTOGRAFIE</strong></NavLink> */}
 
                 </nav>

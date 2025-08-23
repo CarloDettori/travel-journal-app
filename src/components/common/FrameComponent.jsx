@@ -9,7 +9,7 @@ export default function FrameComponent({ children }) {
     return (
         <div className="flex w-full items-center">
 
-            <div className="pt-3 ps-4 w-full">
+            <div className="ps-4 w-full">
                 {/* Top */}
                 <div className="frame-row">
                     <div className="frame-corner" style={{ backgroundImage: frameUrl("a") }}></div>
