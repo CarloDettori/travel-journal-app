@@ -6,7 +6,7 @@ import HomePage from "./pages/HomePage.jsx";
 import TripsPage from "./pages/TripsPage.jsx";
 import EventPage from "./pages/EventPage.jsx";
 import MomentPage from "./pages/MomentPage.jsx";
-import AllPhotoPage from "./pages/AllPhotoPage.jsx";
+import AllMediaPage from "./pages/AllMediaPage.jsx";
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
             <Route path="/trips/:tripId" element={<StepsPage />} />        {/* Lista tappe */}
             <Route path="/trips/:tripId/:stepId" element={<EventPage />} /> {/* Lista eventi */}
             <Route path="/trips/:tripId/:stepId/:eventId" element={<MomentPage />} /> {/* Lista momenti */}
-            <Route path="/photos" element={<AllPhotoPage />} />
+            <Route path="/media" element={<AllMediaPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

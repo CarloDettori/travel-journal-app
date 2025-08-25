@@ -18,22 +18,20 @@ export default function EventFilterComponent() {
     const [selectValue, setSelectValue] = useState("");
     const [sortBy, setSortBy] = useState("");
     const [sortOrder, setSortOrder] = useState(1);
-    const [tags, setTags] = useState([]);
+    const [moods, setMoods] = useState([]);
 
-    // Estrai tag disponibili
+    // Estrai mood disponibili
     useEffect(() => {
         if (!events) return;
-        const uniqueTags = [];
+        const uniqueMoods = [];
         events.forEach((event) => {
-            event.moments?.forEach((moment) => {
-                moment.tags?.forEach((tag) => {
-                    if (!uniqueTags.includes(tag)) {
-                        uniqueTags.push(tag);
-                    }
-                });
+            (event.mood || []).forEach((mood) => {
+                if (!uniqueMoods.includes(mood)) {
+                    uniqueMoods.push(mood);
+                }
             });
         });
-        setTags(uniqueTags);
+        setMoods(uniqueMoods);
     }, [events]);
 
     // Debounce
@@ -77,13 +75,11 @@ export default function EventFilterComponent() {
 
         let filtered = [...events];
 
-        // Filtro per tag
+        // Filtro per mood
         if (selectValue.trim() !== "" && selectValue.trim() !== "-") {
             filtered = filtered.filter((event) =>
-                event.moments?.some((moment) =>
-                    moment.tags?.some((tag) =>
-                        tag.toLowerCase().includes(selectValue.trim().toLowerCase())
-                    )
+                (event.mood || []).some((mood) =>
+                    mood.toLowerCase().includes(selectValue.trim().toLowerCase())
                 )
             );
         }
@@ -100,16 +96,10 @@ export default function EventFilterComponent() {
             let result = 0;
             if (sortBy === "title") {
                 result = a.eventTitle.localeCompare(b.eventTitle);
-            } else if (sortBy === "tags") {
-                const tagsA = (a.moments || [])
-                    .flatMap(moment => moment.tags || [])
-                    .join(" ")
-                    .toLowerCase();
-                const tagsB = (b.moments || [])
-                    .flatMap(moment => moment.tags || [])
-                    .join(" ")
-                    .toLowerCase();
-                result = tagsA.localeCompare(tagsB);
+            } else if (sortBy === "mood") {
+                const moodA = (a.mood || []).join(" ").toLowerCase();
+                const moodB = (b.mood || []).join(" ").toLowerCase();
+                result = moodA.localeCompare(moodB);
             }
             return result * sortOrder;
         });
@@ -130,16 +120,16 @@ export default function EventFilterComponent() {
                 />
             </div>
 
-            {/* Filtro tag */}
+            {/* Filtro mood */}
             <div className="pb-10">
-                <label><strong>Filtro per tag</strong></label>
+                <label><strong>Filtro per vibe</strong></label>
                 <select
                     className="w-full bg-[#4a5566] p-2 text-white rounded-lg text-xs"
                     onChange={handleFilter}
                 >
                     <option value="">Nessuno</option>
-                    {tags.map((tag) => (
-                        <option key={tag} value={tag}>{tag}</option>
+                    {moods.map((mood) => (
+                        <option key={mood} value={mood}>{mood}</option>
                     ))}
                 </select>
             </div>
@@ -150,8 +140,8 @@ export default function EventFilterComponent() {
                     <strong style={{ cursor: "pointer" }} onClick={() => handleSort("title")}>
                         TITOLO {sortBy === "title" ? (sortOrder === 1 ? "▲" : "▼") : ""}
                     </strong>
-                    <strong style={{ cursor: "pointer" }} onClick={() => handleSort("tags")}>
-                        {sortBy === "tags" ? (sortOrder === 1 ? "▲" : "▼") : ""} TAG
+                    <strong style={{ cursor: "pointer" }} onClick={() => handleSort("mood")}>
+                        {sortBy === "mood" ? (sortOrder === 1 ? "▲" : "▼") : ""} VIBE
                     </strong>
                 </p>
             </div>
@@ -176,3 +166,4 @@ export default function EventFilterComponent() {
         </>
     );
 }
+

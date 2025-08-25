@@ -55,7 +55,7 @@ export default function EventCardComponent({ event, stepId, tripId }) {
                             })
                         }
                         <div className="flex">
-                            {
+                            <p className="text-sm pe-2 pt-3">VIBE:</p> {
                                 event.mood.map((m, index) => <p className="text-sm pe-2 pt-3" key={index + 1}>{m}</p>)
                             }
                         </div>

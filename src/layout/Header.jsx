@@ -46,7 +46,7 @@ export default function Header() {
 
                     {theme === 3 ? <NavLink className="navlink p-1 bg-[#515a63] text-white rounded-lg " to="/trips"><strong>VIAGGI</strong></NavLink> : <NavLink className="navlink" to="/trips"><strong>VIAGGI</strong></NavLink>}
 
-                    {theme === 3 ? <NavLink className="navlink p-1 bg-[#515a63] text-white rounded-lg " to="/photos"><strong>FOTO</strong></NavLink> : <NavLink className="navlink" to="/photos"><strong>FOTO</strong></NavLink>}
+                    {theme === 3 ? <NavLink className="navlink p-1 bg-[#515a63] text-white rounded-lg " to="/media"><strong>FOTO E VIDEO</strong></NavLink> : <NavLink className="navlink" to="/media"><strong>FOTO E VIDEO</strong></NavLink>}
 
                     {/* <NavLink className="navlink" to="/tripsphotos"><strong >FOTOGRAFIE</strong></NavLink> */}
 

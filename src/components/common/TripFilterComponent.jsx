@@ -1,5 +1,3 @@
-
-
 import { useState, useMemo, useEffect, useCallback } from "react";
 import TripCardComponent from "./TripCardComponent.jsx";
 
@@ -100,20 +98,8 @@ export default function TripFilterComponent({ trips }) {
             let result = 0;
             if (sortBy === "title") {
                 result = a.tripTitle.localeCompare(b.tripTitle);
-            } else if (sortBy === "tags") {
-                const tagsA = (a.steps || [])
-                    .flatMap(step => step.events || [])
-                    .flatMap(event => event.moments || [])
-                    .flatMap(moment => moment.tags || [])
-                    .join(" ")
-                    .toLowerCase();
-                const tagsB = (b.steps || [])
-                    .flatMap(step => step.events || [])
-                    .flatMap(event => event.moments || [])
-                    .flatMap(moment => moment.tags || [])
-                    .join(" ")
-                    .toLowerCase();
-                result = tagsA.localeCompare(tagsB);
+            } else if (sortBy === "price") {
+                result = a.price - b.price;
             }
             return result * sortOrder;
         });
@@ -154,8 +140,8 @@ export default function TripFilterComponent({ trips }) {
                     <strong style={{ cursor: "pointer" }} onClick={() => handleSort("title")}>
                         TITOLO {sortBy === "title" ? (sortOrder === 1 ? "▲" : "▼") : ""}
                     </strong>
-                    <strong style={{ cursor: "pointer" }} onClick={() => handleSort("tags")}>
-                        {sortBy === "tags" ? (sortOrder === 1 ? "▲" : "▼") : ""} TAG
+                    <strong style={{ cursor: "pointer" }} onClick={() => handleSort("price")}>
+                        {sortBy === "price" ? (sortOrder === 1 ? "▲" : "▼") : ""} PREZZO
                     </strong>
                 </p>
             </div>
@@ -174,3 +160,5 @@ export default function TripFilterComponent({ trips }) {
         </section>
     );
 }
+
+
