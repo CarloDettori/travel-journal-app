@@ -18,7 +18,7 @@ export default function AllMediaPage() {
         .flatMap(trip => trip.steps || [])
         .flatMap(step => step.events || [])
         .flatMap(event => event.moments || [])
-        .map(moment => moment.momentImg)
+        .map(moment => moment.momentVideo)
         .filter(Boolean);
 
     return (
@@ -59,13 +59,16 @@ export default function AllMediaPage() {
                     : ""}
 
                 {selectedMedia === "video" ?
-                    allMomentVideos.map((img, index) => {
+                    allMomentVideos.map((video, index) => {
                         return (
 
-                            <div className="pb-10">
+                            <div key={index + 1} className="pb-10">
 
-                                <FrameComponent key={index + 1}>
-                                    <img className="my-3 photo mx-3 rounded inline shrink" src={img} alt="photo" />
+                                <FrameComponent>
+                                    <video controls muted>
+                                        <source src={video} type="video/mp4"></source>
+                                    </video>
+
                                 </FrameComponent>
 
                             </div>
