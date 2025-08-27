@@ -140,10 +140,30 @@ export default function MomentFilterComponent() {
             <div className="pt-3 text-end">
                 <p className="flex justify-between">
                     <strong style={{ cursor: "pointer" }} onClick={() => handleSort("description")}>
-                        DESCRIZIONE {sortBy === "description" ? (sortOrder === 1 ? "▲" : "▼") : ""}
+                        <span style={{ display: "inline-flex", alignItems: "center" }}>
+                            DECRIZIONE
+                            {sortBy === "description" ? (
+                                sortOrder === 1 ? (
+                                    <img className="px-1" src="/hud/arrow-up.png" alt="" />
+                                ) : (
+                                    <img style={{ transform: "scaleY(-1)" }} className="px-1" src="/hud/arrow-up.png" alt="" />
+                                )
+                            ) : null}
+
+                        </span>
                     </strong>
                     <strong style={{ cursor: "pointer" }} onClick={() => handleSort("tags")}>
-                        {sortBy === "tags" ? (sortOrder === 1 ? "▲" : "▼") : ""} TAG
+                        <span style={{ display: "inline-flex", alignItems: "center" }}>
+
+                            {sortBy === "tags" ? (
+                                sortOrder === 1 ? (
+                                    <img className="px-1" src="/hud/arrow-up.png" alt="" />
+                                ) : (
+                                    <img style={{ transform: "scaleY(-1)" }} className="px-1" src="/hud/arrow-up.png" alt="" />
+                                )
+                            ) : null}
+                            TAGS
+                        </span>
                     </strong>
                 </p>
             </div>

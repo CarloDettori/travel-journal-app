@@ -138,10 +138,30 @@ export default function TripFilterComponent({ trips }) {
             <div className="pt-3 text-end">
                 <p className="flex justify-between">
                     <strong style={{ cursor: "pointer" }} onClick={() => handleSort("title")}>
-                        TITOLO {sortBy === "title" ? (sortOrder === 1 ? "▲" : "▼") : ""}
+                        <span style={{ display: "inline-flex", alignItems: "center" }}>
+                            TITOLO
+                            {sortBy === "title" ? (
+                                sortOrder === 1 ? (
+                                    <img className="px-1" src="/hud/arrow-up.png" alt="" />
+                                ) : (
+                                    <img style={{ transform: "scaleY(-1)" }} className="px-1" src="/hud/arrow-up.png" alt="" />
+                                )
+                            ) : null}
+
+                        </span>
                     </strong>
                     <strong style={{ cursor: "pointer" }} onClick={() => handleSort("price")}>
-                        {sortBy === "price" ? (sortOrder === 1 ? "▲" : "▼") : ""} PREZZO
+                        <span style={{ display: "inline-flex", alignItems: "center" }}>
+
+                            {sortBy === "price" ? (
+                                sortOrder === 1 ? (
+                                    <img className="px-1" src="/hud/arrow-up.png" alt="" />
+                                ) : (
+                                    <img style={{ transform: "scaleY(-1)" }} className="px-1" src="/hud/arrow-up.png" alt="" />
+                                )
+                            ) : null}
+                            PREZZO
+                        </span>
                     </strong>
                 </p>
             </div>
@@ -150,7 +170,7 @@ export default function TripFilterComponent({ trips }) {
             {filteredTrips.length > 0 ? (
                 <div className="flex flex-col gap-3">
                     {filteredTrips.map((trip) => (
-                        <TripCardComponent key={trip.tripId} trip={trip} />
+                        <TripCardComponent key={trip.tripId} trip={trip} tags={tags} />
                     ))}
                 </div>
             ) : (

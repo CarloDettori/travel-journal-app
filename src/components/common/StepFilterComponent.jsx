@@ -87,7 +87,17 @@ export default function StepFilterComponent() {
             <div className="pt-3 text-end">
                 <p className="flex justify-between">
                     <strong style={{ cursor: "pointer" }} onClick={() => handleSort("title")}>
-                        TITOLO {sortBy === "title" ? (sortOrder === 1 ? "▲" : "▼") : ""}
+                        <span style={{ display: "inline-flex", alignItems: "center" }}>
+                            TITOLO
+                            {sortBy === "title" ? (
+                                sortOrder === 1 ? (
+                                    <img className="px-1" src="/hud/arrow-up.png" alt="" />
+                                ) : (
+                                    <img style={{ transform: "scaleY(-1)" }} className="px-1" src="/hud/arrow-up.png" alt="" />
+                                )
+                            ) : null}
+
+                        </span>
                     </strong>
                 </p>
             </div>

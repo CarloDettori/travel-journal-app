@@ -3,7 +3,7 @@ import FrameComponent from "./FrameComponent.jsx"
 import { Link } from "react-router-dom"
 
 export default function MomentCardComponent({ moment }) {
-
+    console.log(moment)
     return (
         < div className="flex items-center me-8">
 
@@ -13,15 +13,27 @@ export default function MomentCardComponent({ moment }) {
 
                 <FrameComponent >
 
-                    <div className="p-3">
-                        <p>{moment.momentDescription}</p>
-                        <img className="my-3 mx-auto rounded" src={moment.momentImg} alt="" />
-                        <p>{moment.tags.map((tag) => tag + " ")}</p>
-                    </div>
+                    {moment.momentVideo.includes("mp4") ?
+                        <div className="p-5">
+                            <p>{moment.momentDescription}</p>
+                            <video className="my-5 mx-auto rounded" controls muted>
+                                <source src={"/" + moment.momentVideo} type="video/mp4"></source>
+                            </video>
+                            <p>{moment.tags.map((tag) => tag + " ")}</p>
+                        </div>
+                        :
+                        <div className="p-5">
+                            <p>{moment.momentDescription}</p>
+                            <img className="my-5 mx-auto rounded" src={moment.momentImg} alt="" />
+                            <p>{moment.tags.map((tag) => tag + " ")}</p>
+                        </div>
+                    }
+
+
 
                 </FrameComponent>
 
-            </div>
+            </div >
 
         </div >
 
