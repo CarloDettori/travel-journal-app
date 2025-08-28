@@ -9,7 +9,7 @@ export default function MomentCardComponent({ moment }) {
 
             <img className="img-natural mx-3" src="/sprites/moment.png" alt="" />
 
-            <div className="w-full cursor-pointer">
+            <div className="w-full">
 
                 <FrameComponent >
 
@@ -24,7 +24,7 @@ export default function MomentCardComponent({ moment }) {
                         :
                         <div className="p-5">
                             <p>{moment.momentDescription}</p>
-                            <img className="my-5 mx-auto rounded" src={moment.momentImg} alt="" onClick={() => setShowModal(true)} />
+                            <img className="my-5 mx-auto rounded cursor-pointer" src={moment.momentImg} alt="" onClick={() => setShowModal(true)} />
                             <p>{moment.tags.map((tag) => tag + " ")}</p>
                         </div>
                     }

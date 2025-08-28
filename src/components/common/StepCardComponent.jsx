@@ -42,7 +42,10 @@ export default function StepCardComponent({ step, tripId }) {
 
                     <div className="p-3 flex flex-col">
                         <div>
-                            <h2 className="text-xl mb-4"><strong>{step.stepTitle}</strong></h2>
+                            <div className="flex">
+                                <h2 className="text-xl mb-4"><strong>{step.stepTitle}</strong></h2>
+                                <p className=" mt-1 mb-4 ms-auto">LUOGO: {step.place}</p>
+                            </div>
                             <div className="flex justify-between">
                                 <div className="pe-20">
                                     <p><strong>{step.stepDescription}</strong></p>
