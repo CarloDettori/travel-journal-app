@@ -15,7 +15,7 @@ export default function HomePge() {
                 </p>
             </FrameComponent>
             <br />
-            <Link className="ms-auto hover:cursor bg-[#4a5566] p-2 text-white rounded-lg text-xs" to={`/trips`}>I TUOI VIAGGI</Link>
+            <Link className="ms-auto bg-[#4a5566] p-2 text-white rounded-lg text-xs" to={`/trips`}>I TUOI VIAGGI</Link>
 
         </section>
     )

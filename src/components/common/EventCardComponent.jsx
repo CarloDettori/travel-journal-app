@@ -12,7 +12,7 @@ export default function EventCardComponent({ event, stepId, tripId }) {
             < div className="flex items-center me-8 w-full" onClick={() => { setClickedEventId(event.eventId) }} >
                 <img className="img-natural mx-3" src="/sprites/event.png" alt="" />
 
-                <div className="hover:poiter w-full">
+                <div className="w-full cursor-pointer">
 
                     <FrameComponent >
 
@@ -59,7 +59,7 @@ export default function EventCardComponent({ event, stepId, tripId }) {
                                 event.mood.map((m, index) => <p className="text-sm pe-2 pt-3" key={index + 1}>{m}</p>)
                             }
                         </div>
-                        <Link className="ms-auto mt-3 hover:cursor bg-[#4a5566] p-2 text-white rounded-lg text-xs" to={`/trips/${tripId}/${stepId}/${event.eventId}`}>dettagli</Link>
+                        <Link className="ms-auto mt-3 bg-[#4a5566] p-2 text-white rounded-lg text-xs" to={`/trips/${tripId}/${stepId}/${event.eventId}`}>dettagli</Link>
 
                     </div>
 

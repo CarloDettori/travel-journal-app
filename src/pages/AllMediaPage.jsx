@@ -26,14 +26,14 @@ export default function AllMediaPage() {
             <h1 className="text-2xl mb-10 text-center"></h1>
             <div className="flex w-full justify-center pb-10">
                 <button
-                    className={`font-bold py-2 px-4 rounded-l ${selectedMedia === "foto" ? "bg-gray-400" : "bg-gray-300 hover:cursor"}`}
+                    className={`font-bold py-2 px-4 rounded-l ${selectedMedia === "foto" ? "bg-gray-400" : "bg-gray-300"}`}
                     disabled={selectedMedia === "foto"}
                     onClick={() => setSelectedMedia("foto")}
                 >
                     FOTO
                 </button>
                 <button
-                    className={`font-bold py-2 px-4 rounded-l ${selectedMedia === "video" ? "bg-gray-400" : "bg-gray-300 hover:cursor"}`}
+                    className={`font-bold py-2 px-4 rounded-l ${selectedMedia === "video" ? "bg-gray-400" : "bg-gray-300"}`}
                     disabled={selectedMedia === "video"}
                     onClick={() => setSelectedMedia("video")}
                 >

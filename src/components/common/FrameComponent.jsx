@@ -36,16 +36,16 @@ export default function FrameComponent({ children }) {
 
             </div >
 
-            <div onClick={e => { e.preventDefault(); e.stopPropagation() }} className="flex flex-col items-center hover:pointer">
+            <div onClick={e => { e.preventDefault(); e.stopPropagation() }} className="flex h-full flex-col justify-center items-center cursor-default">
                 {frameNumber === 26 ?
-                    <img className="px-1" onClick={(e) => { e.preventDefault(); e.stopPropagation(), setFrameNumber(1) }} src="/hud/arrow-up.png" alt="" />
+                    <img className="px-1 cursor-pointer" onClick={(e) => { e.preventDefault(); e.stopPropagation(), setFrameNumber(1) }} src="/hud/arrow-up.png" alt="" />
                     :
-                    <img className="px-1" onClick={(e) => { e.preventDefault(); e.stopPropagation(), setFrameNumber(frameNumber + 1) }} src="/hud/arrow-up.png" alt="" />}
+                    <img className="px-1 cursor-pointer" onClick={(e) => { e.preventDefault(); e.stopPropagation(), setFrameNumber(frameNumber + 1) }} src="/hud/arrow-up.png" alt="" />}
                 <p className="text-sm ps-1">{frameNumber}</p>
                 {frameNumber === 1 ?
-                    <img style={{ transform: "scaleY(-1)" }} className="px-1" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setFrameNumber(26) }} src="/hud/arrow-up.png" alt="" />
+                    <img style={{ transform: "scaleY(-1)" }} className="px-1 cursor-pointer" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setFrameNumber(26) }} src="/hud/arrow-up.png" alt="" />
                     :
-                    <img style={{ transform: "scaleY(-1)" }} className="px-1" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setFrameNumber(frameNumber - 1) }} src="/hud/arrow-up.png" alt="" />}
+                    <img style={{ transform: "scaleY(-1)" }} className="px-1 cursor-pointer" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setFrameNumber(frameNumber - 1) }} src="/hud/arrow-up.png" alt="" />}
             </div>
         </div>
     );

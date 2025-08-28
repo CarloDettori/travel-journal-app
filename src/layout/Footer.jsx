@@ -48,9 +48,9 @@ export default function Footer() {
             }}>
                 <div onClick={e => { e.preventDefault(); e.stopPropagation() }} className="flex justify-center items-center pt-1 pb-2">
                     {theme === 1 ?
-                        <img style={{ transform: "scaleX(-1)" }} className="px-1 hover:cursor" onClick={() => { setTheme(4) }} src="/hud/arrow-right.png" alt="" />
+                        <img style={{ transform: "scaleX(-1)" }} className="px-1 cursor-pointer" onClick={() => { setTheme(4) }} src="/hud/arrow-right.png" alt="" />
                         :
-                        <img style={{ transform: "scaleX(-1)" }} className="px-1 hover:cursor" onClick={() => { setTheme(theme - 1) }} src="/hud/arrow-right.png" alt="" />}
+                        <img style={{ transform: "scaleX(-1)" }} className="px-1 cursor-pointer" onClick={() => { setTheme(theme - 1) }} src="/hud/arrow-right.png" alt="" />}
 
                     <p className=" text-center w-20 text-sm ps-1 ">
                         {theme === 1 ? "prato" : ""}
@@ -60,9 +60,9 @@ export default function Footer() {
                     </p>
 
                     {theme === 4 ?
-                        <img className="px-1 hover:cursor" onClick={(e) => { setTheme(1) }} src="/hud/arrow-right.png" alt="" />
+                        <img className="px-1 cursor-pointer" onClick={(e) => { setTheme(1) }} src="/hud/arrow-right.png" alt="" />
                         :
-                        <img className="px-1 hover:cursor" onClick={(e) => { setTheme(theme + 1) }} src="/hud/arrow-right.png" alt="" />}
+                        <img className="px-1 cursor-pointer" onClick={(e) => { setTheme(theme + 1) }} src="/hud/arrow-right.png" alt="" />}
                 </div>
             </footer >
 

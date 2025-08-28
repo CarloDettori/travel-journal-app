@@ -9,10 +9,10 @@ export default function StepCardComponent({ step, tripId }) {
     return (
         clickedStepId !== step.stepId
             ?
-            < div className="flex items-center hover:cursor w-full" onClick={() => { setClickedStepId(step.stepId) }} >
+            < div className="flex items-center w-full" onClick={() => { setClickedStepId(step.stepId) }} >
                 <img className="img-natural mx-3" src="/sprites/step.png" alt="" />
 
-                <div className="hover:poiter w-full">
+                <div className="w-full cursor-pointer">
 
                     <FrameComponent >
 
@@ -84,7 +84,7 @@ export default function StepCardComponent({ step, tripId }) {
                                 </div>
                             </div>
                         </div>
-                        <Link className="mx-auto mt-5 hover:cursor bg-[#4a5566] p-2 text-white rounded-lg text-xs" to={`/trips/${tripId}/${step.stepId}`}>dettagli</Link>
+                        <Link className="mx-auto mt-5 bg-[#4a5566] p-2 text-white rounded-lg text-xs" to={`/trips/${tripId}/${step.stepId}`}>dettagli</Link>
 
                     </div>
 

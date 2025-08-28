@@ -135,7 +135,7 @@ export default function TripFilterComponent({ trips }) {
             </div>
 
             {/* Ordinamento */}
-            <div className="pt-3 text-end">
+            <div className=" pb-3 text-end">
                 <p className="flex justify-between">
                     <strong style={{ cursor: "pointer" }} onClick={() => handleSort("title")}>
                         <span style={{ display: "inline-flex", alignItems: "center" }}>
@@ -170,7 +170,7 @@ export default function TripFilterComponent({ trips }) {
             {filteredTrips.length > 0 ? (
                 <div className="flex flex-col gap-3">
                     {filteredTrips.map((trip) => (
-                        <TripCardComponent key={trip.tripId} trip={trip} tags={tags} />
+                        <TripCardComponent key={trip.tripId} trip={trip} />
                     ))}
                 </div>
             ) : (

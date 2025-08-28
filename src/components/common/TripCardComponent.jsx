@@ -1,14 +1,35 @@
 import FrameComponent from "./FrameComponent.jsx"
 import { Link } from "react-router-dom"
 import BarComponent from "./BarComponent.jsx"
+import { useState, useEffect } from "react";
 
-export default function TripCardComponent({ trip, tags }) {
-    console.log(trip)
+export default function TripCardComponent({ trip }) {
+
+    const [tags, setTags] = useState([]);
+
+    useEffect(() => {
+        if (!trip) return;
+        const uniqueTags = [];
+
+        trip.steps?.forEach((step) => {
+            step.events?.forEach((event) => {
+                event.moments?.forEach((moment) => {
+                    moment.tags?.forEach((tag) => {
+                        if (!uniqueTags.includes(tag)) {
+                            uniqueTags.push(tag);
+                        }
+                    });
+                });
+            });
+        });
+
+        setTags(uniqueTags);
+    }, [trip]);
 
     return (
         <Link className=" flex w-full" to={`/trips/${trip.tripId}`}>
             <FrameComponent >
-                <div className="p-5 pb-0 flex justify-between hover:cursor">
+                <div className="p-5 pb-0 flex justify-between">
                     <div className="p-3 flex flex-col justify-between">
                         <h2><strong className="text-xl" >{trip.tripTitle}</strong></h2>
                         <p className="text-sm py-1">{trip.tripDescription}</p>
