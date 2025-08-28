@@ -43,7 +43,7 @@ export default function MomentCardComponent({ moment }) {
                     <div className="relative">
                         {/* X di chiusura */}
                         <button
-                            className="p absolute top-2 right-2 text-white font-bold bg-[#4a5566] rounded-full ps-2 pe-1.5 pb-0.5 cursor-pointer z-10"
+                            className="absolute top-2 right-2 text-white font-bold bg-[#4a5566] rounded-full ps-2 pe-1.5 pb-0.5 cursor-pointer z-10"
                             onClick={(e) => { e.stopPropagation(); setShowModal(false); }}
                             aria-label="Chiudi"
                         >

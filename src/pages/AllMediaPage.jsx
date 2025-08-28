@@ -4,7 +4,8 @@ import FrameComponent from "../components/common/FrameComponent.jsx";
 
 
 export default function AllMediaPage() {
-
+    const [showModal, setShowModal] = useState(false);
+    const [modalImg, setModalImg] = useState(null);
     const { trips } = useContext(GlobalContext);
     const [selectedMedia, setSelectedMedia] = useState("foto")
     const allMomentImages = trips
@@ -49,10 +50,11 @@ export default function AllMediaPage() {
                             <div key={index + 1} className="pb-10">
 
                                 <FrameComponent>
-                                    <img className="my-3 photo mx-3 rounded inline shrink" src={img} alt="photo" />
+                                    <img className="my-3 photo mx-3 rounded inline shrink cursor-pointer" src={img} onClick={() => { setShowModal(true); setModalImg(img) }} alt="photo" />
                                 </FrameComponent>
 
                             </div>
+
 
                         )
                     })
@@ -78,6 +80,28 @@ export default function AllMediaPage() {
                     : ""}
 
             </div>
+            {showModal && modalImg && (
+                <div
+                    className="fixed inset-0 bg-opacity-90 bg-[#4a5566] flex items-center justify-center z-50"
+                    onClick={() => setShowModal(false)}
+                >
+                    <div className="relative">
+                        <button
+                            className="absolute top-2 right-2 text-white font-bold bg-[#4a5566] rounded-full ps-2 pe-1.5 pb-0.5 cursor-pointer z-10"
+                            onClick={e => { e.stopPropagation(); setShowModal(false); }}
+                            aria-label="Chiudi"
+                        >
+                            x
+                        </button>
+                        <img
+                            src={modalImg}
+                            alt=""
+                            className="max-w-[90vw] max-h-[90vh] rounded shadow-lg"
+                            onClick={e => e.stopPropagation()}
+                        />
+                    </div>
+                </div>
+            )}
         </section>
     );
 }

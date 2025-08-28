@@ -42,7 +42,9 @@ export default function EventCardComponent({ event, stepId, tripId }) {
 
                     <div className="p-3 flex flex-col">
 
-                        <h2 className="text-xl mb-2"><strong>{event.eventTitle}</strong></h2>
+                        <div className="flex">
+                            <h2 className="text-xl mb-1 me-2"><strong>{event.eventTitle}</strong></h2>{event.icons.map((icon, index) => <img className="img-natural my-auto mx-1" src={icon} alt="" />)}
+                        </div>
                         <p className=" mb-2"> {event.eventDescription}</p>
                         {
                             event.moments.map((moment) => {
