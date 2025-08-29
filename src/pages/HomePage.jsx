@@ -4,7 +4,7 @@ export default function HomePge() {
 
 
     return (
-        <section className="text-center">
+        <section className="text-center overflow-scroll">
             <p className="text-2xl pb-4">BENVENUTO NEL TUO</p>
             <p className="text-6xl pb-5">TRAVEL JOURNAL</p>
             <FrameComponent>

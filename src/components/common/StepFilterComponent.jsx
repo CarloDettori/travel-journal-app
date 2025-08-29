@@ -85,7 +85,7 @@ export default function StepFilterComponent() {
 
             {/* Ordinamento */}
             <div className="pt-3 text-end">
-                <p className="flex justify-between">
+                <p className="flex justify-center pb-3 ">
                     <strong style={{ cursor: "pointer" }} onClick={() => handleSort("title")}>
                         <span style={{ display: "inline-flex", alignItems: "center" }}>
                             TITOLO
@@ -103,9 +103,9 @@ export default function StepFilterComponent() {
             </div>
 
             {/* Lista tappe */}
-            <div className="w-200 mx-auto">
+            <div className="max-w-200 mx-auto flex flex-shrink min-w-0">
                 {filteredSteps.length > 0 ? (
-                    <div className="flex flex-col gap-3">
+                    <div className="flex flex-col gap-3 flex-shrink min-w-0 mx-auto">
                         {filteredSteps.map((step) => (
                             <StepCardComponent
                                 key={step.stepId}

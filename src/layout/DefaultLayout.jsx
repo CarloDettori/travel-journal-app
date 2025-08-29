@@ -48,8 +48,7 @@ export default function DefaultLayout() {
             }} ></div>
 
             <main className="flex px-10 py-5" style={{
-                backgroundImage: url,
-                height: "calc(100vh - 128px)"
+                backgroundImage: url
             }}>
 
                 <Outlet />

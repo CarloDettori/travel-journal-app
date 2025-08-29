@@ -29,7 +29,7 @@ export default function TripCardComponent({ trip }) {
     return (
         <Link className=" flex w-full" to={`/trips/${trip.tripId}`}>
             <FrameComponent >
-                <div className="p-5 pb-0 flex justify-between">
+                <div className="p-5 pb-0 flex justify-between flex-wrap">
                     <div className="p-3 flex flex-col justify-between">
                         <h2><strong className="text-xl" >{trip.tripTitle}</strong></h2>
                         <p className="text-sm py-1">{trip.tripDescription}</p>

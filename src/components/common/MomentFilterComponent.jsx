@@ -137,7 +137,7 @@ export default function MomentFilterComponent() {
             </div>
 
             {/* Ordinamento */}
-            <div className="pt-3 text-end">
+            <div className="py-3 text-end">
                 <p className="flex justify-between">
                     <strong style={{ cursor: "pointer" }} onClick={() => handleSort("description")}>
                         <span style={{ display: "inline-flex", alignItems: "center" }}>
@@ -169,7 +169,7 @@ export default function MomentFilterComponent() {
             </div>
 
             {/* Lista momenti */}
-            <div className="w-200 mx-auto">
+            <div className="max-w-200 w-full mx-auto">
 
                 {filteredMoments.length > 0 ? (
                     <div className="flex flex-col gap-3">

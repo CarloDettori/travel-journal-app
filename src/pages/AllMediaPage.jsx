@@ -23,7 +23,7 @@ export default function AllMediaPage() {
         .filter(Boolean);
 
     return (
-        <section className="w-700 overflow-y-scroll">
+        <section className="w-900 w-full overflow-y-scroll">
             <h1 className="text-2xl mb-10 text-center"></h1>
             <div className="flex w-full justify-center pb-10">
                 <button
@@ -47,10 +47,10 @@ export default function AllMediaPage() {
                     allMomentImages.map((img, index) => {
                         return (
 
-                            <div key={index + 1} className="pb-10">
+                            <div key={index + 1} className="pb-10 max-w-sm  w-full">
 
                                 <FrameComponent>
-                                    <img className="my-3 photo mx-3 rounded inline shrink cursor-pointer" src={img} onClick={() => { setShowModal(true); setModalImg(img) }} alt="photo" />
+                                    <img className="my-3 mxphoto px-3 rounded mx-auto  cursor-pointer" src={img} onClick={() => { setShowModal(true); setModalImg(img) }} alt="photo" />
                                 </FrameComponent>
 
                             </div>

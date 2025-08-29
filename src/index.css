@@ -26,15 +26,17 @@ body {
     box-sizing: border-box;
 }
 
+main {
+    height: calc(100vh - 128px)
+}
+
 section {
     -ms-overflow-style: none;
     margin: 0 auto;
     scrollbar-width: none;
 }
 
-header {
-    height: 64px;
-}
+
 
 
 .frame-row {
@@ -84,5 +86,17 @@ header {
 
 }
 
+@media (min-width: 553px) {
+    header {
+        height: 64px;
+    }
+}
+
+@media (max-width: 553px) {
+
+    main {
+        height: calc(100vh - 176px)
+    }
+}
 
 @import "tailwindcss";

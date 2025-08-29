@@ -11,7 +11,7 @@ export default function StepPage() {
     const steps = trip?.steps || [];
 
     return (
-        <section className="w-full overflow-y-scroll">
+        <section className="max-w-full overflow-y-scroll">
             <h1 className="text-2xl mb-10 text-center">
                 TAPPE DEL VIAGGIO: {trip?.tripTitle || "Non trovato"}
             </h1>

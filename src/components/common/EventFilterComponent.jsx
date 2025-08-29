@@ -167,7 +167,7 @@ export default function EventFilterComponent() {
             </div>
 
             {/* Lista eventi */}
-            <div className="w-200 mx-auto">
+            <div className="max-w-200 w-full mx-auto">
                 {filteredEvents.length > 0 ? (
                     <div className="flex flex-col gap-3">
                         {filteredEvents.map((event) => (

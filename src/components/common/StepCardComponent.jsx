@@ -9,7 +9,7 @@ export default function StepCardComponent({ step, tripId }) {
     return (
         clickedStepId !== step.stepId
             ?
-            < div className="flex items-center w-full" onClick={() => { setClickedStepId(step.stepId) }} >
+            < div className="flex items-center w-full flex-shrink min-w-0" onClick={() => { setClickedStepId(step.stepId) }} >
                 <img className="img-natural mx-3" src="/sprites/step.png" alt="" />
 
                 <div className="w-full cursor-pointer">
@@ -46,10 +46,10 @@ export default function StepCardComponent({ step, tripId }) {
                                 <h2 className="text-xl mb-4"><strong>{step.stepTitle}</strong></h2>
                                 <p className=" mt-1 mb-4 ms-auto">LUOGO: {step.place}</p>
                             </div>
-                            <div className="flex justify-between">
-                                <div className="pe-20">
+                            <div className="flex justify-between flex-wrap">
+                                <div className="  pe-20">
                                     <p><strong>{step.stepDescription}</strong></p>
-                                    <div className="flex flex-col gap-5 mt-5">
+                                    <div className="flex flex-col gap-5 my-5">
                                         {
                                             step.events.map((event) => {
                                                 return (
@@ -62,8 +62,8 @@ export default function StepCardComponent({ step, tripId }) {
                                         }
                                     </div>
                                 </div>
-                                <div className="flex flex-col justify-between text-sm">
-                                    <div className="px-3 flex flex-col gap-4">
+                                <div className="flex flex-col justify-between gap-5 text-sm mb-5">
+                                    <div className="px-3 flex flex-col gap-2">
                                         {step.goodies.map((good, index) => {
                                             return (
                                                 <div className="flex">
@@ -73,7 +73,7 @@ export default function StepCardComponent({ step, tripId }) {
                                             )
                                         })}
                                     </div>
-                                    <div className="px-3 flex flex-col gap-4">
+                                    <div className="px-3 flex flex-col gap-2">
                                         {step.badies.map((bad, index) => {
                                             return (
                                                 <div className="flex">
